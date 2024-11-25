@@ -1,0 +1,46 @@
+no_pvp_count: 10
+worldborder:
+  overworld:
+    world_border_size: 50000
+  nether:
+    world_border_size: 12500
+  end:
+    world_border_size: 3000
+ability:
+  axe:
+    heal_percentage: 0.3
+    axe_cooldown: 1
+  trident:
+    max_health: 40
+    water_submerged_mining_speed: 1.0
+    water_movement_efficiency: 1.0
+    water_movement_bonus: 1.0
+    regeneration_amplifier: 3
+  arrow:
+    speed_multiplier: 1.2
+  stick:
+    damage_multiplier: 0.2
+    death_damage_reduction: 0.3
+  fist:
+    base_health: 10.0
+    base_attack_damage: 6.0
+    increase_health: 1.0
+  cross:
+    speed_multiplier: 0.1
+    max_speed_increase: 0.5
+  mace:
+    jump_boost_multiplier: 0.2
+  snowball:
+    potion_duration: 20
+    slowness_amplifier: 2
+    mining_fatigue_amplifier: 2
+  fishing:
+    diamond_amount: 2
+  lighter:
+    diamond_amount: 2
+  explorer:
+    strength_amplifier: 2
+    speed_amplifier: 1
+    regeneration_amplifier: 2
+    absorption_amplifier: 3
+    falling_damage: 0.3
