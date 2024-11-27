@@ -106,7 +106,7 @@ public class ExplorerAbility extends Ability implements Listener {
                 applyBuffToAllies(player, buffType);
                 abilityUsedMap.put(buffType, true);
             }
-            item.setAmount(item.getAmount() - 1);
+            item.setAmount(Math.max(item.getAmount() - 1, 0));
         }
     }
 }

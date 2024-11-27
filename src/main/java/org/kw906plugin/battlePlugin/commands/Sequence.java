@@ -10,6 +10,7 @@ import org.kw906plugin.battlePlugin.events.NoPvPEvent;
 import org.kw906plugin.battlePlugin.player.BattlePlayer;
 import org.kw906plugin.battlePlugin.player.TeamManager;
 import org.kw906plugin.battlePlugin.prepared_ability.*;
+import org.kw906plugin.battlePlugin.utils.PlayerImpl;
 
 import java.lang.reflect.Field;
 import java.util.Arrays;
@@ -40,6 +41,8 @@ public class Sequence {
             Configure.WorldBorderConfig worldBorderConfig = BattlePlugin.config.getWorldBorderConfig();
             SendMessage.broadcastMessage(Component.text("시퀀스 - 플레이어 초기화 중.."));
             setFullCondition();
+            TeamManager.initScoreboard();
+            PlayerImpl.resetPlayerAttributes();
 
             SendMessage.broadcastMessage(Component.text("시퀀스 - 오버월드 월드보더 설정 중..")
                                                   .color(NamedTextColor.GRAY));
@@ -76,11 +79,12 @@ public class Sequence {
     }
 
     public static void setup() {
+        Status.setStatus(Status.GAME_SETUP);
         SendMessage.sendMessageOP(Component.text("시퀀스 - 셋업 진행중")
                                            .color(NamedTextColor.GRAY)
         );
         SendMessage.broadcastMessage(Component.text("시퀀스 - 팀 초기화 중.."));
-        TeamManager.resetTeamScore();
+        TeamManager.initScoreboard();
         TeamManager.showScoreboard();
         SendMessage.broadcastMessage(Component.text("시퀀스 - 타이머 설정 중.."));
         NoPvPEvent.startPvPTimer();
@@ -90,18 +94,25 @@ public class Sequence {
         SendMessage.broadcastMessage(Component.text("시퀀스 - 플레이어 추가 중..")
                                               .color(NamedTextColor.GRAY));
 
-        Ability playerAbility = switch (ability) {
-            case "axe" -> new AxeAbility();
-            case "shield" -> new ShieldAbility();
-            case "trident" -> new TridentAbility();
-            case "arrow" -> new ArrowAbility();
-            default -> throw new IllegalStateException("Unexpected value: " + ability);
-        };
-
         getOnlinePlayers().stream()
                           .filter(player -> player.getName().equals(name))
                           .findFirst()
                           .ifPresent(player -> {
+                              Ability playerAbility = switch (ability) {
+                                  case "axe" -> new AxeAbility();
+                                  case "shield" -> new ShieldAbility();
+                                  case "trident" -> new TridentAbility();
+                                  case "arrow" -> new ArrowAbility(player);
+                                  case "crossbow" -> new CrossbowAbility();
+                                  case "explorer" -> new ExplorerAbility();
+                                  case "fishingrod" -> new FishingRodAbility();
+                                  case "fist" -> new FistAbility(player);
+                                  case "lighter" -> new LighterAbility(player);
+                                  case "mace" -> new MaceAbility();
+                                  case "snowball" -> new SnowballAbility();
+                                  case "stick" -> new StickAbility(player);
+                                  default -> throw new IllegalStateException("Unexpected value: " + ability);
+                              };
                               BattlePlayer battlePlayer = new BattlePlayer(player, playerAbility, teamIndex);
                               AbilityManager.addPlayer(battlePlayer);
                               SendMessage.broadcastMessage(Component.text(
@@ -234,9 +245,11 @@ public class Sequence {
     }
 
     public static void stop() {
-        AbilityManager.cleanup();
         NoPvPEvent.stopPvPTimer();
-        TeamManager.stopScoreboardTask();
+        TeamManager.forcedStop();
+        TeamManager.clearScoreboard();
+        AbilityManager.cleanup();
+        Status.setStatus(Status.STOPPED);
         SendMessage.broadcastMessage(Component.text("시퀀스 - 게임이 관리자에 의해 종료되었습니다!")
                                               .color(NamedTextColor.BLUE));
     }

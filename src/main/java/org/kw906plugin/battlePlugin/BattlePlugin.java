@@ -4,8 +4,12 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.kw906plugin.battlePlugin.commands.Configure;
 import org.kw906plugin.battlePlugin.commands.MainController;
+import org.kw906plugin.battlePlugin.events.FistListener;
+import org.kw906plugin.battlePlugin.events.LighterListener;
 import org.kw906plugin.battlePlugin.events.PlayerDeathListener;
+import org.kw906plugin.battlePlugin.events.StickListener;
 import org.kw906plugin.battlePlugin.prepared_ability.*;
+import org.kw906plugin.battlePlugin.utils.PlayerImpl;
 
 import java.util.Objects;
 
@@ -18,18 +22,18 @@ public final class BattlePlugin extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         config = new Configure();
+        PlayerImpl.setAttributeValue();
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new ShieldAbility(), this);
         pm.registerEvents(new AxeAbility(), this);
         pm.registerEvents(new TridentAbility(), this);
-        pm.registerEvents(new ArrowAbility(), this);
-        pm.registerEvents(new FistAbility(), this);
+        new FistListener(this);
         pm.registerEvents(new CrossbowAbility(), this);
-        pm.registerEvents(new StickAbility(), this);
+        new StickListener(this);
         pm.registerEvents(new MaceAbility(), this);
         pm.registerEvents(new SnowballAbility(), this);
         pm.registerEvents(new FishingRodAbility(), this);
-        pm.registerEvents(new LighterAbility(), this);
+        new LighterListener(this);
         pm.registerEvents(new ExplorerAbility(), this);
 
         pm.registerEvents(new PlayerDeathListener(), this);

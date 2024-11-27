@@ -18,6 +18,7 @@ package org.kw906plugin.battlePlugin.prepared_ability;
 import org.bukkit.entity.Player;
 import org.kw906plugin.battlePlugin.Ability;
 import org.kw906plugin.battlePlugin.player.BattlePlayer;
+import org.kw906plugin.battlePlugin.utils.PlayerImpl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,14 +39,8 @@ public class AbilityManager {
     }
 
     public static void cleanup() {
-        cleanAbilities();
         playerAbilities.clear();
-    }
-
-    private static void cleanAbilities() {
-        for (BattlePlayer battlePlayer : playerAbilities) {
-            StickAbility.resetAccumulatedDamage(battlePlayer.getPlayer());
-        }
+        PlayerImpl.resetPlayerAttributes();
     }
 
     public static BattlePlayer findPlayer(Player player) {

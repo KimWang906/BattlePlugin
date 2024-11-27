@@ -17,6 +17,7 @@ import static org.kw906plugin.battlePlugin.prepared_ability.AbilityManager.hasAb
 
 public class FishingRodAbility extends Ability implements Listener {
     private final int diamondAmount = config.fishingRodAbilityConfig.diamondAmount;
+    private final double luckBaseValue = config.fishingRodAbilityConfig.luckBaseValue;
 
     public FishingRodAbility() {
         setName("낚싯대 능력");
@@ -28,17 +29,18 @@ public class FishingRodAbility extends Ability implements Listener {
         Player player = event.getPlayer();
         ItemStack item = event.getItem();
 
-        if (item != null && item.getType() == Material.FISHING_ROD && hasAbility(player, FishingRodAbility.class)) {
+        if (item != null && hasAbility(player, FishingRodAbility.class)) {
             AttributeInstance playerAttr = player.getAttribute(Attribute.LUCK);
             if (playerAttr != null) {
-                playerAttr.setBaseValue(1024);
+                playerAttr.setBaseValue(luckBaseValue);
             }
             player.addPotionEffect(new PotionEffect(PotionEffectType.HERO_OF_THE_VILLAGE, Integer.MAX_VALUE, 1));
         }
 
-        if (item != null && item.getType() == Material.ENCHANTED_BOOK && hasAbility(player, FishingRodAbility.class) && event.getAction().isRightClick()) {
+        if (item != null && item.getType().equals(Material.ENCHANTED_BOOK) &&
+                hasAbility(player, FishingRodAbility.class) && event.getAction().isRightClick()) {
             grantDiamondAbility(player);
-            item.setAmount(item.getAmount() - 1);
+            item.setAmount(Math.max(item.getAmount() - 1, 0));
         }
     }
 

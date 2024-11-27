@@ -166,8 +166,8 @@ public class Configure {
             this.maxHealth = config.getInt("ability.trident.trident_max_health", 40);
             this.waterSubmergedMiningSpeed = config.getDouble("ability.trident.water_submerged_mining_speed", 1.0);
             this.waterMovementEfficiency = config.getDouble("ability.trident.water_movement_efficiency", 1.0);
-            this.oxygenBonus = config.getDouble("ability.trident.oxygen_bonus", 1.0);
-            this.regenerationAmplifier = config.getInt("ability.trident.regeneration_amplifier", 3);
+            this.oxygenBonus = config.getDouble("ability.trident.oxygen_bonus", 1024);
+            this.regenerationAmplifier = config.getInt("ability.trident.regeneration_amplifier", 1);
         }
 
         public void saveAbilityConfig(FileConfiguration config) {
@@ -184,7 +184,7 @@ public class Configure {
 
         public ArrowAbilityConfig(FileConfiguration config) {
             super(config);
-            this.speedMultiplier = config.getDouble("ability.arrow.speed_multiplier", 1.2);
+            this.speedMultiplier = config.getDouble("ability.arrow.speed_multiplier", 0.18);
         }
 
         public void saveAbilityConfig(FileConfiguration config) {
@@ -196,17 +196,25 @@ public class Configure {
         public double damageMultiplier;
         public double deathDamageReduction;
         public double maxDamage;
+        public long damageIncrementThreshold;
+        public long maxAccumulatedDamage;
 
         public StickAbilityConfig(FileConfiguration config) {
             super(config);
             this.damageMultiplier = config.getDouble("ability.stick.damage_multiplier", 0.2);
             this.deathDamageReduction = config.getDouble("ability.stick.death_damage_reduction", 0.3);
             this.maxDamage = config.getDouble("ability.stick.max_damage", 20.0);
+            this.damageIncrementThreshold = config.getLong("ability.stick.damage_increment_threshold", 10000);
+            this.maxAccumulatedDamage = config.getLong("ability.stick.max_accumulated_damage", 190000);
         }
 
         public void saveAbilityConfig(FileConfiguration config) {
             config.set("ability.stick.damage_multiplier", damageMultiplier);
             config.set("ability.stick.death_damage_reduction", deathDamageReduction);
+            config.set("ability.stick.max_damage", maxDamage);
+            config.set("ability.stick.damage_increment_threshold", damageIncrementThreshold);
+            config.set("ability.stick.max_accumulated_damage", maxAccumulatedDamage);
+            config.set("ability.stick.max_accumulated_damage", maxAccumulatedDamage);
         }
     }
 
@@ -237,7 +245,7 @@ public class Configure {
 
         public CrossbowAbilityConfig(FileConfiguration config) {
             super(config);
-            speedMultiplier = config.getDouble("ability.cross.speed_multiplier", 0.1);
+            speedMultiplier = config.getDouble("ability.cross.speed_multiplier", 0.01);
             maxSpeedIncrease = config.getDouble("ability.cross.max_speed_increase", 0.5);
         }
 
@@ -269,8 +277,8 @@ public class Configure {
         public SnowballAbilityConfig(FileConfiguration config) {
             super(config);
             this.potionDuration = config.getInt("ability.snowball.potion_duration", 20);
-            this.slownessAmplifier = config.getInt("ability.snowball.slowness_amplifier", 2);
-            this.miningFatigueAmplifier = config.getInt("ability.snowball.mining_fatigue_amplifier", 2);
+            this.slownessAmplifier = config.getInt("ability.snowball.slowness_amplifier", 1);
+            this.miningFatigueAmplifier = config.getInt("ability.snowball.mining_fatigue_amplifier", 1);
             this.additionalDamage = config.getLong("ability.snowball.additional_damage", 5);
             this.throwSpeed = config.getInt("ability.snowball.throw_speed", 2);
         }
@@ -284,14 +292,17 @@ public class Configure {
 
     public static class FishingRodAbilityConfig extends AbilityConfig {
         public int diamondAmount;
+        public double luckBaseValue;
 
         public FishingRodAbilityConfig(FileConfiguration config) {
             super(config);
             diamondAmount = config.getInt("ability.fishing.diamond_amount", 2);
+            luckBaseValue = config.getDouble("ability.fishing.luck_base_value", 1024);
         }
 
         public void saveAbilityConfig(FileConfiguration config) {
             config.set("ability.fishing.diamond_amount", diamondAmount);
+            config.set("ability.fishing.luck_base_value", luckBaseValue);
         }
     }
 
@@ -316,10 +327,10 @@ public class Configure {
 
         public ExplorerAbilityConfig(FileConfiguration config) {
             super(config);
-            strengthAmplifier = config.getInt("ability.explorer.strength_amplifier", 2);
-            hasteAmplifier = config.getInt("ability.explorer.haste_amplifier", 1);
-            regenerationAmplifier = config.getInt("ability.explorer.regeneration_amplifier", 2);
-            absorptionAmplifier = config.getInt("ability.explorer.absorption_amplifier", 3);
+            strengthAmplifier = config.getInt("ability.explorer.strength_amplifier", 1);
+            hasteAmplifier = config.getInt("ability.explorer.haste_amplifier", 0);
+            regenerationAmplifier = config.getInt("ability.explorer.regeneration_amplifier", 1);
+            absorptionAmplifier = config.getInt("ability.explorer.absorption_amplifier", 2);
             fallingDamage = config.getDouble("ability.explorer.falling_damage", 0.3);
         }
 

@@ -14,7 +14,7 @@ import static org.kw906plugin.battlePlugin.prepared_ability.AbilityManager.hasAb
 public class ShieldAbility extends Ability implements Listener {
     public ShieldAbility() {
         setName("방패");
-        setDescription("오프핸드에 들면 무적, 메인핸드에 들면 공격 불가 상태가 됩니다.");
+        setDescription("왼손에 들면 무적, 오른손에 들면 공격 불가 상태가 됩니다.");
         addRequiredItems(new ItemStack(Material.SHIELD));
     }
 

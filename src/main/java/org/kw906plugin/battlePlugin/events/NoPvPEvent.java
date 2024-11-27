@@ -10,6 +10,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
 import org.kw906plugin.battlePlugin.BattlePlugin;
 import org.kw906plugin.battlePlugin.SendMessage;
+import org.kw906plugin.battlePlugin.Status;
 
 import static org.kw906plugin.battlePlugin.BattlePlugin.config;
 
@@ -21,6 +22,7 @@ public class NoPvPEvent implements Listener {
     public NoPvPEvent() {}
 
     public static void startPvPTimer() {
+        Status.setStatus(Status.COUNT_DOWN);
         SendMessage.broadcastMessage(Component.text(config.noPVPCount + "분 후 PVP가 가능합니다.")
                                               .color(NamedTextColor.BLUE));
 
@@ -32,6 +34,7 @@ public class NoPvPEvent implements Listener {
             @Override
             public void run() {
                 pvpDisabled = false;
+                Status.setStatus(Status.RUNNING);
                 SendMessage.broadcastMessage(Component.text(config.noPVPCount + "분이 지나 PVP가 활성화 되었습니다!")
                                                       .color(NamedTextColor.BLUE));
             }

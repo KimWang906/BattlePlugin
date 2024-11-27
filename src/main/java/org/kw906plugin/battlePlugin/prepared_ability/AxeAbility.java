@@ -1,6 +1,5 @@
 package org.kw906plugin.battlePlugin.prepared_ability;
 
-import org.apache.commons.lang3.ObjectUtils;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.Player;
@@ -9,6 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.inventory.ItemStack;
 import org.kw906plugin.battlePlugin.Ability;
+import org.kw906plugin.battlePlugin.utils.PlayerImpl;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -74,15 +74,14 @@ public class AxeAbility extends Ability implements Listener {
                     // 쿨타임을 갱신
                     updateCooldown(player);
 
-                    // 체력 회복 로직
                     double damageDealt = event.getFinalDamage();
                     AxeAbility axeAbility = (AxeAbility) getAbility(player);
-                    double healAmount = damageDealt * axeAbility.getHealPercentage();
-
-                    // 최대 체력을 가져오는 코드 변경
-                    double maxHealth = player.getAttribute(Attribute.MAX_HEALTH).getValue(); // Attribute로 최대 체력 가져오기
-                    double newHealth = Math.min(player.getHealth() + healAmount, maxHealth); // 최대 체력을 기준으로 체력 회복
-                    player.setHealth(newHealth);
+                    if (axeAbility != null) {
+                        double healAmount = damageDealt * axeAbility.getHealPercentage();
+                        double maxHealth = PlayerImpl.INITIAL_MAX_HEALTH;
+                        double newHealth = Math.min(player.getHealth() + healAmount, maxHealth);
+                        player.setHealth(newHealth);
+                    }
                 }
             }
         }

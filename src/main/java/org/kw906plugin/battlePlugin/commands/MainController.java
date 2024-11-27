@@ -33,7 +33,6 @@ public class MainController implements CommandExecutor {
             subCommand = args[0];
         }
 
-        String playerName = args[1];
         switch (subCommand) {
             case "start":
                 Sequence.start();
@@ -45,11 +44,14 @@ public class MainController implements CommandExecutor {
                 Sequence.init();
                 break;
             case "register":
+                String regPlayerName = args[1];
                 String ability = args[2];
                 int teamIndex = Integer.parseInt(args[3]);
-                Sequence.register(playerName, ability, teamIndex);
+                Sequence.register(regPlayerName, ability, teamIndex);
+                break;
             case "unregister":
-                Sequence.unregister(playerName);
+                String unregPlayerName = args[1];
+                Sequence.unregister(unregPlayerName);
                 break;
             case "status":
                 sender.sendMessage("Status Game Command");
