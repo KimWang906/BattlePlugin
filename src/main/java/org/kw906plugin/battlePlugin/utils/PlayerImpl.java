@@ -66,8 +66,9 @@ public class PlayerImpl {
         }
     }
 
-    public static void resetPlayerAttributes() {
+    public static void resetPlayerAbility() {
         for (Player player : getOnlinePlayers()) {
+            player.clearActivePotionEffects();
             for (Map.Entry<Attribute, Double> entry : modifyAttributeMap.entrySet()) {
                 Attribute attribute = entry.getKey();
                 double value = entry.getValue();

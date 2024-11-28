@@ -47,4 +47,8 @@ public enum Status {
         return Component.text("게임상태 : " + currentStatus.color + currentStatus.toString())
                         .color(NamedTextColor.GOLD);
     }
+
+    public static boolean isRunning() {
+        return currentStatus == Status.RUNNING || currentStatus == Status.COUNT_DOWN;
+    }
 }

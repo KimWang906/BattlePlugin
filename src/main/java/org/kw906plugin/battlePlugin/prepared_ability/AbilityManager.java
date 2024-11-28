@@ -15,7 +15,10 @@ package org.kw906plugin.battlePlugin.prepared_ability;
 //탐험가: 특정아이템을 사용 시 아군 전체 영구 버프
 //ex)전달체 사용 시 아군 전체 수중호흡
 
+import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 import org.kw906plugin.battlePlugin.Ability;
 import org.kw906plugin.battlePlugin.player.BattlePlayer;
 import org.kw906plugin.battlePlugin.utils.PlayerImpl;
@@ -25,6 +28,14 @@ import java.util.List;
 
 public class AbilityManager {
     private static final ArrayList<BattlePlayer> playerAbilities = new ArrayList<>();
+    private static final ArrayList<ItemStack> banItemList = new ArrayList<>();
+
+    public static void setDefaultBanItems() {
+        banItemList.add(new ItemStack(Material.WOODEN_SWORD));
+        banItemList.add(new ItemStack(Material.GOLDEN_SWORD));
+        banItemList.add(new ItemStack(Material.DIAMOND_SWORD));
+        banItemList.add(new ItemStack(Material.NETHERITE_SWORD));
+    }
 
     public static List<BattlePlayer> getPlayers() {
         return playerAbilities;
@@ -40,7 +51,7 @@ public class AbilityManager {
 
     public static void cleanup() {
         playerAbilities.clear();
-        PlayerImpl.resetPlayerAttributes();
+        PlayerImpl.resetPlayerAbility();
     }
 
     public static BattlePlayer findPlayer(Player player) {
@@ -64,5 +75,25 @@ public class AbilityManager {
     public static boolean hasAbility(Player player, Class<? extends Ability> abilityClass) {
         Ability ability = getAbility(player);
         return ability != null && ability.getClass().equals(abilityClass);
+    }
+
+    public static void limitItems(Player master) {
+        for (ItemStack item : Ability.getRequiredItems()) {
+            NamespacedKey recipe = item.getType().getKey();
+            master.discoverRecipe(recipe);
+            for (BattlePlayer battlePlayer : AbilityManager.getPlayers()) {
+                if (!battlePlayer.getPlayer().equals(master)) {
+                    battlePlayer.getPlayer().undiscoverRecipe(recipe);
+                }
+            }
+        }
+    }
+
+    public static void customLimitItems() {
+        for (ItemStack item : banItemList) {
+            for (BattlePlayer battlePlayer : AbilityManager.getPlayers()) {
+                battlePlayer.getPlayer().undiscoverRecipe(item.getType().getKey());
+            }
+        }
     }
 }

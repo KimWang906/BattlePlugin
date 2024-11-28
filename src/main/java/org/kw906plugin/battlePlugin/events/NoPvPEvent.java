@@ -2,6 +2,8 @@ package org.kw906plugin.battlePlugin.events;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
+import org.bukkit.GameRule;
+import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -11,6 +13,7 @@ import org.bukkit.scheduler.BukkitTask;
 import org.kw906plugin.battlePlugin.BattlePlugin;
 import org.kw906plugin.battlePlugin.SendMessage;
 import org.kw906plugin.battlePlugin.Status;
+import org.kw906plugin.battlePlugin.commands.Configure;
 
 import static org.kw906plugin.battlePlugin.BattlePlugin.config;
 
@@ -23,6 +26,11 @@ public class NoPvPEvent implements Listener {
 
     public static void startPvPTimer() {
         Status.setStatus(Status.COUNT_DOWN);
+
+        config.getWorldConfig().getNether().setGameRule(GameRule.KEEP_INVENTORY, true);
+        config.getWorldConfig().getOverworld().setGameRule(GameRule.KEEP_INVENTORY, true);
+        config.getWorldConfig().getTheEnd().setGameRule(GameRule.KEEP_INVENTORY, true);
+
         SendMessage.broadcastMessage(Component.text(config.noPVPCount + "분 후 PVP가 가능합니다.")
                                               .color(NamedTextColor.BLUE));
 
@@ -33,6 +41,9 @@ public class NoPvPEvent implements Listener {
         pvpTimerTask = new BukkitRunnable() {
             @Override
             public void run() {
+                config.getWorldConfig().getNether().setGameRule(GameRule.KEEP_INVENTORY, false);
+                config.getWorldConfig().getOverworld().setGameRule(GameRule.KEEP_INVENTORY, false);
+                config.getWorldConfig().getTheEnd().setGameRule(GameRule.KEEP_INVENTORY, false);
                 pvpDisabled = false;
                 Status.setStatus(Status.RUNNING);
                 SendMessage.broadcastMessage(Component.text(config.noPVPCount + "분이 지나 PVP가 활성화 되었습니다!")

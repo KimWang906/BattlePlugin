@@ -1,11 +1,10 @@
 package org.kw906plugin.battlePlugin.player;
 
-import org.bukkit.attribute.Attribute;
+import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 import org.kw906plugin.battlePlugin.Ability;
-
-import java.util.HashMap;
-import java.util.Map;
+import org.kw906plugin.battlePlugin.prepared_ability.AbilityManager;
 
 public class BattlePlayer {
     private Player player;

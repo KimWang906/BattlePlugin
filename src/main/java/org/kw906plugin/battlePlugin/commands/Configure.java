@@ -159,7 +159,7 @@ public class Configure {
         public double waterSubmergedMiningSpeed;
         public double waterMovementEfficiency;
         public double oxygenBonus;
-        public int regenerationAmplifier;
+        public int saturationAmplifier;
 
         public TridentAbilityConfig(FileConfiguration config) {
             super(config);
@@ -167,7 +167,7 @@ public class Configure {
             this.waterSubmergedMiningSpeed = config.getDouble("ability.trident.water_submerged_mining_speed", 1.0);
             this.waterMovementEfficiency = config.getDouble("ability.trident.water_movement_efficiency", 1.0);
             this.oxygenBonus = config.getDouble("ability.trident.oxygen_bonus", 1024);
-            this.regenerationAmplifier = config.getInt("ability.trident.regeneration_amplifier", 1);
+            this.saturationAmplifier = config.getInt("ability.trident.saturationAmplifier", 1);
         }
 
         public void saveAbilityConfig(FileConfiguration config) {
@@ -175,7 +175,7 @@ public class Configure {
             config.set("ability.trident.water_submerged_mining_speed", waterSubmergedMiningSpeed);
             config.set("ability.trident.water_movement_efficiency", waterMovementEfficiency);
             config.set("ability.trident.water_movement_bonus", oxygenBonus);
-            config.set("ability.trident.regeneration_amplifier", regenerationAmplifier);
+            config.set("ability.trident.saturationAmplifier", saturationAmplifier);
         }
     }
 
@@ -184,7 +184,7 @@ public class Configure {
 
         public ArrowAbilityConfig(FileConfiguration config) {
             super(config);
-            this.speedMultiplier = config.getDouble("ability.arrow.speed_multiplier", 0.18);
+            this.speedMultiplier = config.getDouble("ability.arrow.speed_multiplier", 0.27);
         }
 
         public void saveAbilityConfig(FileConfiguration config) {
@@ -226,8 +226,8 @@ public class Configure {
 
         public FistAbilityConfig(FileConfiguration config) {
             super(config);
-            this.baseHealth = config.getDouble("ability.fist.base_health", 10);
-            this.baseAttackDamage = config.getDouble("ability.fist.base_attack_damage", 6);
+            this.baseHealth = config.getDouble("ability.fist.base_health", 0.5);
+            this.baseAttackDamage = config.getDouble("ability.fist.base_attack_damage", 7);
             this.increaseHealth = config.getDouble("ability.fist.increase_health", 1);
             this.maximumHealth = config.getLong("ability.fist.maximum_health", 60);
         }
@@ -245,7 +245,7 @@ public class Configure {
 
         public CrossbowAbilityConfig(FileConfiguration config) {
             super(config);
-            speedMultiplier = config.getDouble("ability.cross.speed_multiplier", 0.01);
+            speedMultiplier = config.getDouble("ability.cross.speed_multiplier", 0.15);
             maxSpeedIncrease = config.getDouble("ability.cross.max_speed_increase", 0.5);
         }
 
@@ -259,7 +259,7 @@ public class Configure {
         public double jumpBoostMultiplier;
         public MaceAbilityConfig(FileConfiguration config) {
             super(config);
-            jumpBoostMultiplier = config.getDouble("ability.mace.jump_boost_multiplier", 0.2);
+            jumpBoostMultiplier = config.getDouble("ability.mace.jump_boost_multiplier", 2);
         }
 
         public void saveAbilityConfig(FileConfiguration config) {
@@ -296,7 +296,7 @@ public class Configure {
 
         public FishingRodAbilityConfig(FileConfiguration config) {
             super(config);
-            diamondAmount = config.getInt("ability.fishing.diamond_amount", 2);
+            diamondAmount = config.getInt("ability.fishing.diamond_amount", 1);
             luckBaseValue = config.getDouble("ability.fishing.luck_base_value", 1024);
         }
 
@@ -323,6 +323,7 @@ public class Configure {
         public final int hasteAmplifier;
         public final int regenerationAmplifier;
         public final int absorptionAmplifier;
+        public final int bonusScore;
         public final double fallingDamage;
 
         public ExplorerAbilityConfig(FileConfiguration config) {
@@ -332,6 +333,7 @@ public class Configure {
             regenerationAmplifier = config.getInt("ability.explorer.regeneration_amplifier", 1);
             absorptionAmplifier = config.getInt("ability.explorer.absorption_amplifier", 2);
             fallingDamage = config.getDouble("ability.explorer.falling_damage", 0.3);
+            bonusScore = config.getInt("ability.explorer.bonus_score", 10);
         }
 
         public void saveAbilityConfig(FileConfiguration config) {
@@ -340,6 +342,7 @@ public class Configure {
             config.set("ability.explorer.regeneration_amplifier", regenerationAmplifier);
             config.set("ability.explorer.absorption_amplifier", absorptionAmplifier);
             config.set("ability.explorer.falling_damage", fallingDamage);
+            config.set("ability.explorer.bonus_score", bonusScore);
         }
     }
 

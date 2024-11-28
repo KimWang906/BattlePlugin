@@ -1,11 +1,13 @@
 package org.kw906plugin.battlePlugin.prepared_ability;
 
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeInstance;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.kw906plugin.battlePlugin.Ability;
+import org.kw906plugin.battlePlugin.player.BattlePlayer;
 
 import static org.kw906plugin.battlePlugin.BattlePlugin.config;
 
@@ -19,5 +21,7 @@ public class ArrowAbility extends Ability {
             double speedMultiplier = config.arrowAbilityConfig.speedMultiplier;
             speedAttribute.setBaseValue(speedAttribute.getDefaultValue() * speedMultiplier);
         }
+
+        AbilityManager.limitItems(player);
     }
 }

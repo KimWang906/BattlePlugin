@@ -16,25 +16,17 @@ import static org.kw906plugin.battlePlugin.BattlePlugin.config;
 import static org.kw906plugin.battlePlugin.prepared_ability.AbilityManager.getPlayers;
 import static org.kw906plugin.battlePlugin.prepared_ability.AbilityManager.hasAbility;
 
-public class MaceAbility extends Ability implements Listener {
+public class MaceAbility extends Ability {
     private static final double JUMP_BOOST_MULTIPLIER = config.maceAbilityConfig.jumpBoostMultiplier; // 점프 강화 비율
     private static final float DEFAULT_JUMP_STRENGTH = 0.42f; // 기본 점프 강도
     private static final Material MACE_MATERIAL = Material.MACE; // 철퇴 아이템
 
-    public MaceAbility() {
+    public MaceAbility(Player player) {
         setName("철퇴");
         setDescription("철퇴를 들고 있으면 낙하 피해가 무효화되고, 점프가 강화됩니다.");
         addRequiredItems(new ItemStack(MACE_MATERIAL));
+        AbilityManager.limitItems(player);
         onHasAbility();
-    }
-
-    @EventHandler
-    public void onFallDamage(EntityDamageEvent event) {
-        if (event.getEntity() instanceof Player player) {
-            if (hasAbility(player, MaceAbility.class) && event.getCause().equals(EntityDamageEvent.DamageCause.FALL)) {
-                event.setCancelled(true);
-            }
-        }
     }
 
     public void onHasAbility() {

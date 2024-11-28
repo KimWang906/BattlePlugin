@@ -17,7 +17,7 @@ import java.util.HashMap;
 import static org.kw906plugin.battlePlugin.BattlePlugin.config;
 
 public class TeamManager {
-    private static final HashMap<Integer, Integer> teamScore = new HashMap<>();
+    private static HashMap<Integer, Integer> teamScore;
     private static final long MAX_SCORE = config.maxScore;
     private static int taskId = -1; // taskId를 저장할 변수
     private static boolean forcedStop = false;
@@ -25,6 +25,10 @@ public class TeamManager {
     private static Scoreboard scoreboard;
 
     public static void initScoreboard() {
+        if (scoreboard != null) {
+            scoreboard.getEntries().forEach(scoreboard::resetScores);
+        }
+        teamScore = new HashMap<>();
         teamScore.put(1, 0);
         teamScore.put(2, 0);
         teamScore.put(3, 0);
@@ -38,23 +42,31 @@ public class TeamManager {
     public static void showScoreboard() {
         taskId = BattlePlugin.getPlugin(BattlePlugin.class).getServer().getScheduler().scheduleSyncRepeatingTask(
                 BattlePlugin.getPlugin(BattlePlugin.class), () -> {
+                    // 스코어보드 초기화
+                    scoreboard.getEntries().forEach(scoreboard::resetScores);
+
                     // 팀 점수 갱신
-                    for (int i = 1; i <= 3; i++) { // 팀 번호 1, 2, 3에 대해
-                        int currentTeamScore = TeamManager.getTeamScore().getOrDefault(i, 0);
+                    for (int i = 1; i <= 3; i++) {
+                        int currentTeamScore = teamScore.getOrDefault(i, 0);
                         Score score = objective.getScore("Team " + i);
                         score.setScore(currentTeamScore);
+//                        SendMessage.logConsole("Current team score is " + currentTeamScore);
                     }
 
+                    // 플레이어에게 스코어보드 설정
                     for (BattlePlayer battlePlayer : AbilityManager.getPlayers()) {
                         Player player = battlePlayer.getPlayer();
                         player.setScoreboard(scoreboard);
                     }
 
                     if (shouldStopTask() || isForcedStop()) {
+                        SendMessage.logConsole("Stopping scoreboard task...");
+                        forcedStop = false;
                         stopScoreboardTask();
                     }
-                }, 0L, 20L); // 20L = 1초마다 실행
+                }, 0L, 20L);
     }
+
 
     public static void clearScoreboard() {
         for (BattlePlayer battlePlayer : AbilityManager.getPlayers()) {
@@ -66,9 +78,12 @@ public class TeamManager {
     private static void stopScoreboardTask() {
         if (taskId != -1) {
             Bukkit.getScheduler().cancelTask(taskId);
+            SendMessage.logConsole("Stopped scoreboard task");
             taskId = -1;
+            forcedStop = false; // 플래그 초기화
         }
     }
+
 
     public static boolean shouldStopTask() {
         // 종료 조건 예: 모든 팀이 특정 점수를 달성했을 때
@@ -95,8 +110,10 @@ public class TeamManager {
         checkMaxScore(team);
     }
 
-    public static void addTeamScore(int team, int score) {
-        teamScore.put(team, teamScore.get(team) + score);
+    public static void addTeamScore(int team, int bonusScore) {
+        teamScore.put(team, teamScore.get(team) + bonusScore);
+        SendMessage.logConsole("Team " + team + " Score: " + teamScore.get(team));
+        SendMessage.logConsole("Bonus: " + bonusScore);
         checkMaxScore(team);
     }
 

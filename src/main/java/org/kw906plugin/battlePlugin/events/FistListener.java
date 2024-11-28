@@ -45,7 +45,10 @@ public class FistListener implements Listener {
             ItemStack item = event.getItem();
             if (item != null && item.getType() == Material.NETHERITE_INGOT) {
                 double newHealth = Math.min(player.getHealth() + NETHERITE_INCREASE_HEALTH, MAX_ALLOWED_HEALTH);
-                player.setHealth(newHealth);
+                AttributeInstance attr = player.getAttribute(Attribute.MAX_HEALTH);
+                if (attr != null) {
+                    attr.setBaseValue(newHealth);
+                }
                 item.setAmount(item.getAmount() - 1);
             }
         }

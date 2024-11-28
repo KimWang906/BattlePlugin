@@ -42,22 +42,28 @@ public class Sequence {
             SendMessage.broadcastMessage(Component.text("시퀀스 - 플레이어 초기화 중.."));
             setFullCondition();
             TeamManager.initScoreboard();
-            PlayerImpl.resetPlayerAttributes();
+            PlayerImpl.resetPlayerAbility();
 
             SendMessage.broadcastMessage(Component.text("시퀀스 - 오버월드 월드보더 설정 중..")
                                                   .color(NamedTextColor.GRAY));
-            setWorldBorder(worldConfig.getOverworld(),
-                           worldBorderConfig.getOverworldWorldBorderSize());
+            setWorldBorder(
+                    worldConfig.getOverworld(),
+                    worldBorderConfig.getOverworldWorldBorderSize()
+            );
 
             SendMessage.broadcastMessage(Component.text("시퀀스 - 네더 월드보더 설정 중..")
                                                   .color(NamedTextColor.GRAY));
-            setWorldBorder(worldConfig.getNether(),
-                           worldBorderConfig.getNetherWorldBorderSize());
+            setWorldBorder(
+                    worldConfig.getNether(),
+                    worldBorderConfig.getNetherWorldBorderSize()
+            );
 
             SendMessage.broadcastMessage(Component.text("시퀀스 - 엔드 월드보더 설정 중..")
                                                   .color(NamedTextColor.GRAY));
-            setWorldBorder(worldConfig.getTheEnd(),
-                           worldBorderConfig.getEndWorldBorderSize());
+            setWorldBorder(
+                    worldConfig.getTheEnd(),
+                    worldBorderConfig.getEndWorldBorderSize()
+            );
         } catch (NullPointerException e) {
             SendMessage.broadcastMessage(Component.text("게임 초기화 도중 오류가 발생하였습니다.")
                                                   .color(NamedTextColor.RED));
@@ -88,9 +94,22 @@ public class Sequence {
         TeamManager.showScoreboard();
         SendMessage.broadcastMessage(Component.text("시퀀스 - 타이머 설정 중.."));
         NoPvPEvent.startPvPTimer();
+        SendMessage.broadcastMessage(Component.text("벤 아이템 목록 설정 중.."));
+        AbilityManager.setDefaultBanItems();
+        SendMessage.broadcastMessage(Component.text("벤 아이템 설정 중.."));
+        AbilityManager.customLimitItems();
     }
 
     public static void register(String name, String ability, int teamIndex) {
+        if (Status.getStatus().equals(Status.RUNNING) ||
+                Status.getStatus().equals(Status.GAME_SETUP) ||
+                Status.getStatus().equals(Status.COUNT_DOWN))
+        {
+            SendMessage.sendMessageOP(Component.text("게임이 이미 시작되어 등록이 불가능합니다.").color(NamedTextColor.RED));
+        } else if (!Status.getStatus().equals(Status.INITIALIZED)) {
+            SendMessage.sendMessageOP(Component.text("게임이 초기화 되지 않았습니다!").color(NamedTextColor.RED));
+        }
+
         SendMessage.broadcastMessage(Component.text("시퀀스 - 플레이어 추가 중..")
                                               .color(NamedTextColor.GRAY));
 
@@ -99,20 +118,21 @@ public class Sequence {
                           .findFirst()
                           .ifPresent(player -> {
                               Ability playerAbility = switch (ability) {
-                                  case "axe" -> new AxeAbility();
-                                  case "shield" -> new ShieldAbility();
-                                  case "trident" -> new TridentAbility();
+                                  case "axe" -> new AxeAbility(player);
+                                  case "shield" -> new ShieldAbility(player);
+                                  case "trident" -> new TridentAbility(player);
                                   case "arrow" -> new ArrowAbility(player);
-                                  case "crossbow" -> new CrossbowAbility();
+                                  case "crossbow" -> new CrossbowAbility(player);
                                   case "explorer" -> new ExplorerAbility();
-                                  case "fishingrod" -> new FishingRodAbility();
+                                  case "fishingrod" -> new FishingRodAbility(player);
                                   case "fist" -> new FistAbility(player);
                                   case "lighter" -> new LighterAbility(player);
-                                  case "mace" -> new MaceAbility();
-                                  case "snowball" -> new SnowballAbility();
+                                  case "mace" -> new MaceAbility(player);
+                                  case "snowball" -> new SnowballAbility(player);
                                   case "stick" -> new StickAbility(player);
                                   default -> throw new IllegalStateException("Unexpected value: " + ability);
                               };
+
                               BattlePlayer battlePlayer = new BattlePlayer(player, playerAbility, teamIndex);
                               AbilityManager.addPlayer(battlePlayer);
                               SendMessage.broadcastMessage(Component.text(
