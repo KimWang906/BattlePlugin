@@ -1,5 +1,7 @@
 package org.kw906plugin.battlePlugin.events;
 
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -7,6 +9,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
+import org.kw906plugin.battlePlugin.SendMessage;
 import org.kw906plugin.battlePlugin.prepared_ability.AxeAbility;
 import org.kw906plugin.battlePlugin.utils.PlayerImpl;
 
@@ -51,19 +54,14 @@ public class AxeListener implements Listener {
                 ItemStack mainHandItem = player.getInventory().getItemInMainHand();
 
                 // 도끼로 공격했는지 확인
-                if (mainHandItem.getType() == Material.WOODEN_AXE ||
-                        mainHandItem.getType() == Material.STONE_AXE ||
-                        mainHandItem.getType() == Material.IRON_AXE ||
-                        mainHandItem.getType() == Material.GOLDEN_AXE ||
-                        mainHandItem.getType() == Material.DIAMOND_AXE ||
-                        mainHandItem.getType() == Material.NETHERITE_AXE) {
+                if (mainHandItem.getType() == Material.WOODEN_AXE || mainHandItem.getType() == Material.STONE_AXE || mainHandItem.getType() == Material.IRON_AXE || mainHandItem.getType() == Material.GOLDEN_AXE || mainHandItem.getType() == Material.DIAMOND_AXE || mainHandItem.getType() == Material.NETHERITE_AXE) {
 
                     // 쿨타임 체크
                     if (isCooldown(player)) {
                         long lastUsedTime = lastUsedTimes.get(player.getUniqueId());
-                        long remainingTime = (cooldownTime - (System.currentTimeMillis() - lastUsedTime)) / 1000; // 남은 쿨타임 계산 (초 단위)
-                        player.sendMessage("도끼: 쿨타임 " + remainingTime + "초 남음.");
-                        return; // 쿨타임이 끝나지 않으면 능력 사용을 중단
+                        long remainingTime = (cooldownTime - (System.currentTimeMillis() - lastUsedTime)) / 1000;
+                        SendMessage.sendActionBar(player, Component.text("도끼: 쿨타임 " + remainingTime + "초 남음.").color(NamedTextColor.DARK_GRAY));
+                        return;
                     }
 
                     // 쿨타임을 갱신
