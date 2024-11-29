@@ -41,7 +41,7 @@ public class MaceAbility extends Ability {
                             resetJumpStrength(player);
                         }
                     }
-                }, 0L, 20L);
+                }, 0L, 1L);
     }
 
     private void enhanceJumpStrength(Player player) {

@@ -7,12 +7,13 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.kw906plugin.battlePlugin.BattlePlugin;
+import org.kw906plugin.battlePlugin.prepared_ability.TridentAbility;
 
 import static org.kw906plugin.battlePlugin.BattlePlugin.config;
+import static org.kw906plugin.battlePlugin.prepared_ability.AbilityManager.hasAbility;
 
 public class TridentListener implements Listener {
     private static final long DEFAULT_PLAYER_HEALTH = 20;
@@ -27,17 +28,13 @@ public class TridentListener implements Listener {
     @EventHandler
     public void onPlayerMove(PlayerMoveEvent event) {
         Player player = event.getPlayer();
-
-        if (hasAbility(player) && isInWater(player)) {
-            applyWaterEffects(player);
-        } else {
-            removeWaterEffects(player);
+        if (hasAbility(player, TridentAbility.class)) {
+            if (isInWater(player)) {
+                applyWaterEffects(player);
+            } else {
+                removeWaterEffects(player);
+            }
         }
-    }
-
-    private boolean hasAbility(Player player) {
-        ItemStack mainHandItem = player.getInventory().getItemInMainHand();
-        return mainHandItem.getType() == Material.TRIDENT;
     }
 
     private boolean isInWater(Player player) {
@@ -98,6 +95,6 @@ public class TridentListener implements Listener {
             waterEffectAttr_2.setBaseValue(DEFAULT_OXYGEN_BONUS);
         }
 
-        player.removePotionEffect(PotionEffectType.REGENERATION);
+        player.removePotionEffect(PotionEffectType.SATURATION);
     }
 }

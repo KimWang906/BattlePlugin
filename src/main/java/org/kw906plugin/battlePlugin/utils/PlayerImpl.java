@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeInstance;
 import org.bukkit.entity.Player;
+import org.kw906plugin.battlePlugin.SendMessage;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,6 +25,10 @@ public class PlayerImpl {
     public static final double INITIAL_ATTACK_SPEED = 4.0;
     public static final double INITIAL_LUCK = 0.0;
     public static final double INITIAL_JUMP_STRENGTH = 0.42;
+
+    static {
+        setAttributeValue();
+    }
 
     public static void setAttributeValue() {
         modifyAttributeMap.put(Attribute.MAX_HEALTH, INITIAL_MAX_HEALTH);
@@ -58,26 +63,29 @@ public class PlayerImpl {
     public static void setFullCondition() {
         for (Player player : Bukkit.getOnlinePlayers()) {
             removeAllItemsAndArmor(player);
+            // MAX_HEALTH 속성 값 얻기
             AttributeInstance attribute = player.getAttribute(Attribute.MAX_HEALTH);
-            assert attribute != null;
-            attribute.setBaseValue(20);
-            player.heal(20);
-            player.setFoodLevel(20);
+            if (attribute != null) {
+                attribute.setBaseValue(INITIAL_MAX_HEALTH); // 최대 체력 설정
+                player.setHealth(attribute.getBaseValue()); // 체력 회복
+            }
+            player.setFoodLevel(20); // 음식 레벨 최대화
+            SendMessage.logConsole("Player " + player.getName() + " is now full condition");
         }
     }
 
     public static void resetPlayerAbility() {
         for (Player player : getOnlinePlayers()) {
-            player.clearActivePotionEffects();
+            player.clearActivePotionEffects(); // 모든 포션 효과 제거
             for (Map.Entry<Attribute, Double> entry : modifyAttributeMap.entrySet()) {
                 Attribute attribute = entry.getKey();
                 double value = entry.getValue();
                 AttributeInstance attributeInstance = player.getAttribute(attribute);
                 if (attributeInstance != null) {
-                    attributeInstance.setBaseValue(value);
+                    attributeInstance.setBaseValue(value); // 속성 값 초기화
                 }
             }
+            SendMessage.logConsole("Player " + player.getName() + " is now reset ability");
         }
     }
 }
-

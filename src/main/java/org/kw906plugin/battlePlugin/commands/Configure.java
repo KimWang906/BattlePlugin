@@ -27,6 +27,7 @@ public class Configure {
     public FishingRodAbilityConfig fishingRodAbilityConfig;
     public LighterAbilityConfig lighterAbilityConfig;
     public ExplorerAbilityConfig explorerAbilityConfig;
+    public WizardAbilityConfig wizardAbilityConfig;
 
     private FileConfiguration config = getPlugin(BattlePlugin.class).getConfig();
 
@@ -56,6 +57,7 @@ public class Configure {
         fishingRodAbilityConfig = new FishingRodAbilityConfig(config);
         lighterAbilityConfig = new LighterAbilityConfig(config);
         explorerAbilityConfig = new ExplorerAbilityConfig(config);
+        wizardAbilityConfig = new WizardAbilityConfig(config);
 
         // 최종 설정 저장
         saveAllConfigs();
@@ -180,15 +182,15 @@ public class Configure {
     }
 
     public static class ArrowAbilityConfig extends AbilityConfig {
-        public double speedMultiplier;
+        public double speed;
 
         public ArrowAbilityConfig(FileConfiguration config) {
             super(config);
-            this.speedMultiplier = config.getDouble("ability.arrow.speed_multiplier", 0.27);
+            this.speed = config.getDouble("ability.arrow.speed", 0.18);
         }
 
         public void saveAbilityConfig(FileConfiguration config) {
-            config.set("ability.arrow.speed_multiplier", speedMultiplier);
+            config.set("ability.arrow.speed", speed);
         }
     }
 
@@ -228,7 +230,7 @@ public class Configure {
             super(config);
             this.baseHealth = config.getDouble("ability.fist.base_health", 0.5);
             this.baseAttackDamage = config.getDouble("ability.fist.base_attack_damage", 7);
-            this.increaseHealth = config.getDouble("ability.fist.increase_health", 1);
+            this.increaseHealth = config.getDouble("ability.fist.increase_health", 2);
             this.maximumHealth = config.getLong("ability.fist.maximum_health", 60);
         }
 
@@ -245,8 +247,8 @@ public class Configure {
 
         public CrossbowAbilityConfig(FileConfiguration config) {
             super(config);
-            speedMultiplier = config.getDouble("ability.cross.speed_multiplier", 0.15);
-            maxSpeedIncrease = config.getDouble("ability.cross.max_speed_increase", 0.5);
+            speedMultiplier = config.getDouble("ability.cross.speed_multiplier", 0.03);
+            maxSpeedIncrease = config.getDouble("ability.cross.max_speed_increase", 0.3);
         }
 
         public void saveAbilityConfig(FileConfiguration config) {
@@ -310,7 +312,7 @@ public class Configure {
         public int diamondAmount;
         public LighterAbilityConfig(FileConfiguration config) {
             super(config);
-            diamondAmount = config.getInt("ability.lighter.diamond_amount", 2);
+            diamondAmount = config.getInt("ability.lighter.diamond_amount", 1);
         }
 
         public void saveAbilityConfig(FileConfiguration config) {
@@ -322,7 +324,7 @@ public class Configure {
         public final int strengthAmplifier;
         public final int hasteAmplifier;
         public final int regenerationAmplifier;
-        public final int absorptionAmplifier;
+        public final int additionalHealth;
         public final int bonusScore;
         public final double fallingDamage;
 
@@ -330,8 +332,8 @@ public class Configure {
             super(config);
             strengthAmplifier = config.getInt("ability.explorer.strength_amplifier", 1);
             hasteAmplifier = config.getInt("ability.explorer.haste_amplifier", 0);
-            regenerationAmplifier = config.getInt("ability.explorer.regeneration_amplifier", 1);
-            absorptionAmplifier = config.getInt("ability.explorer.absorption_amplifier", 2);
+            regenerationAmplifier = config.getInt("ability.explorer.regeneration_amplifier", 2);
+            additionalHealth = config.getInt("ability.explorer.additionalHealth", 10);
             fallingDamage = config.getDouble("ability.explorer.falling_damage", 0.3);
             bonusScore = config.getInt("ability.explorer.bonus_score", 10);
         }
@@ -340,9 +342,28 @@ public class Configure {
             config.set("ability.explorer.strength_amplifier", strengthAmplifier);
             config.set("ability.explorer.speed_amplifier", hasteAmplifier);
             config.set("ability.explorer.regeneration_amplifier", regenerationAmplifier);
-            config.set("ability.explorer.absorption_amplifier", absorptionAmplifier);
+            config.set("ability.explorer.additionalHealth", additionalHealth);
             config.set("ability.explorer.falling_damage", fallingDamage);
             config.set("ability.explorer.bonus_score", bonusScore);
+        }
+    }
+
+    public static class WizardAbilityConfig extends AbilityConfig {
+        public int poisonDuration;
+        public int poisonAmplifier;
+        public int instantDamageAmplifier;
+
+        public WizardAbilityConfig(FileConfiguration config) {
+            super(config);
+            poisonDuration = config.getInt("ability.wizard.poison_duration", 20);
+            poisonAmplifier = config.getInt("ability.wizard.poison_amplifier", 0);
+            instantDamageAmplifier = config.getInt("ability.wizard.instant_damage_amplifier", 1);
+        }
+
+        public void saveAbilityConfig(FileConfiguration config) {
+            config.set("ability.wizard.poison_duration", poisonDuration);
+            config.set("ability.wizard.poison_amplifier", poisonAmplifier);
+            config.set("ability.wizard.instant_damage_amplifier", instantDamageAmplifier);
         }
     }
 
@@ -378,6 +399,8 @@ public class Configure {
         fishingRodAbilityConfig.saveAbilityConfig(config);
         lighterAbilityConfig.saveAbilityConfig(config);
         explorerAbilityConfig.saveAbilityConfig(config);
+        wizardAbilityConfig.saveAbilityConfig(config);
+
         getPlugin(BattlePlugin.class).saveConfig();
     }
 }

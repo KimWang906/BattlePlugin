@@ -7,7 +7,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.kw906plugin.battlePlugin.BattlePlugin;
-import org.kw906plugin.battlePlugin.prepared_ability.FishingRodAbility;
+import org.kw906plugin.battlePlugin.prepared_ability.LighterAbility;
 
 import static org.kw906plugin.battlePlugin.BattlePlugin.config;
 import static org.kw906plugin.battlePlugin.prepared_ability.AbilityManager.hasAbility;
@@ -25,7 +25,7 @@ public class LighterListener implements Listener {
         Player player = event.getPlayer();
         ItemStack item = event.getItem();
         if (item != null && item.getType() == Material.GHAST_TEAR &&
-                hasAbility(player, FishingRodAbility.class) && event.getAction().isRightClick()) {
+                hasAbility(player, LighterAbility.class) && event.getAction().isRightClick()) {
             grantDiamondAbility(player);
             item.setAmount(item.getAmount() - 1);
         }

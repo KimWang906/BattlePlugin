@@ -1,111 +1,262 @@
-[13:19:57] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.5; Homebrew Homebrew) on Mac OS X 15.1.1 (aarch64)
-[13:19:57] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.3-60-master@cf956ac (2024-11-24T21:39:46Z) for Minecraft 1.21.3
-[13:19:57] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
-[13:19:57] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins/BattlePlugin-1.0-SNAPSHOT.jar'...
-[13:19:57] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins/BattlePlugin-1.0-SNAPSHOT.jar' in 236ms.
-[13:19:57] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
-[13:19:57] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
+[00:21:58] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.5; Homebrew Homebrew) on Mac OS X 15.1.1 (aarch64)
+[00:21:58] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.3-60-master@cf956ac (2024-11-24T21:39:46Z) for Minecraft 1.21.3
+[00:21:58] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[00:21:58] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins/BattlePlugin-1.0-SNAPSHOT.jar'...
+[00:21:59] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins/BattlePlugin-1.0-SNAPSHOT.jar' in 237ms.
+[00:21:59] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
+[00:21:59] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
  - BattlePlugin (1.0-SNAPSHOT)
-[13:19:59] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[13:20:00] [ServerMain/INFO]: Loaded 1337 recipes
-[13:20:00] [ServerMain/INFO]: Loaded 1448 advancements
-[13:20:00] [Server thread/INFO]: Starting minecraft server version 1.21.3
-[13:20:00] [Server thread/INFO]: Loading properties
-[13:20:00] [Server thread/INFO]: This server is running Paper version 1.21.3-60-master@cf956ac (2024-11-24T21:39:46Z) (Implementing API version 1.21.3-R0.1-SNAPSHOT)
-[13:20:00] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
-[13:20:00] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[13:20:00] [Server thread/INFO]: Using 4 threads for Netty based IO
-[13:20:01] [Server thread/INFO]: [MoonriseCommon] Paper is using 3 worker threads, 1 I/O threads
-[13:20:01] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using population gen parallelism: true
-[13:20:01] [Server thread/INFO]: Default game type: SURVIVAL
-[13:20:01] [Server thread/INFO]: Generating keypair
-[13:20:01] [Server thread/INFO]: Starting Minecraft server on *:25565
-[13:20:01] [Server thread/INFO]: Using default channel type
-[13:20:01] [Server thread/INFO]: Paper: Using libdeflate (macOS ARM64 / Apple Silicon) compression from Velocity.
-[13:20:01] [Server thread/INFO]: Paper: Using native (macOS ARM64 / Apple Silicon) cipher from Velocity.
-[13:20:01] [Server thread/INFO]: [BattlePlugin] Loading server plugin BattlePlugin v1.0-SNAPSHOT
-[13:20:01] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[13:20:01] [Server thread/INFO]: Preparing level "world"
-[13:20:01] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[13:20:01] [Server thread/INFO]: Preparing spawn area: 0%
-[13:20:01] [Paper Common Worker #2/INFO]: [MCTypeRegistry] Initialising converters for DataConverter...
-[13:20:02] [Paper Common Worker #2/INFO]: [MCTypeRegistry] Finished initialising converters for DataConverter in 113.1ms
-[13:20:02] [Server thread/INFO]: Preparing spawn area: 63%
-[13:20:02] [Server thread/INFO]: Time elapsed: 512 ms
-[13:20:02] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
-[13:20:02] [Server thread/INFO]: Preparing spawn area: 0%
-[13:20:02] [Server thread/INFO]: Time elapsed: 66 ms
-[13:20:02] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
-[13:20:02] [Server thread/INFO]: Preparing spawn area: 0%
-[13:20:02] [Server thread/INFO]: Time elapsed: 33 ms
-[13:20:02] [Server thread/INFO]: [BattlePlugin] Enabling BattlePlugin v1.0-SNAPSHOT
-[13:20:02] [Server thread/INFO]: [BattlePlugin] Battle 플러그인이 활성화 되었습니다.
-[13:20:02] [Server thread/INFO]: [spark] Starting background profiler...
-[13:20:03] [Server thread/INFO]: Done preparing level "world" (1.706s)
-[13:20:03] [Server thread/INFO]: Running delayed init tasks
-[13:20:03] [Server thread/INFO]: Done (6.395s)! For help, type "help"
-[13:20:15] [User Authenticator #0/INFO]: UUID of player KimWang0906 is 94230708-9f79-487a-80f4-b3507938de6e
-[13:20:15] [Server thread/INFO]: KimWang0906 joined the game
-[13:20:15] [Server thread/INFO]: KimWang0906[/127.0.0.1:49239] logged in with entity id 25 at ([world]-106.93351636803494, 128.59664465849121, -7.698338864820159)
-[13:20:18] [Server thread/INFO]: KimWang0906 issued server command: /ab init
-[13:20:18] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임 초기화 진행
-[13:20:18] [Server thread/INFO]: [CatchTail] 시퀀스 - 플레이어 초기화 중..
-[13:20:18] [Server thread/INFO]: [CatchTail] 시퀀스 - 오버월드 월드보더 설정 중..
-[13:20:18] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="world 월드보더 크기가 50000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
-[13:20:18] [Server thread/INFO]: [CatchTail] 시퀀스 - 네더 월드보더 설정 중..
-[13:20:18] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="world_nether 월드보더 크기가 12500으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
-[13:20:18] [Server thread/INFO]: [CatchTail] 시퀀스 - 엔드 월드보더 설정 중..
-[13:20:18] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="world_the_end 월드보더 크기가 3000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
-[13:20:18] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. STANDBY → INITIALIZED", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
-[13:20:18] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임 초기화가 완료되었습니다.
-[13:20:20] [Server thread/INFO]: KimWang0906 issued server command: /ab register KimWang0906 lighter 1
-[13:20:20] [Server thread/INFO]: [CatchTail] 시퀀스 - 플레이어 추가 중..
-[13:20:20] [Server thread/INFO]: [CatchTail] 시퀀스 - KimWang0906을 대기 목록에 추가하였습니다.
-[13:20:21] [Server thread/INFO]: KimWang0906 issued server command: /ab start
-[13:20:21] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임이 시작됩니다!
-[13:20:21] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. INITIALIZED → GAME_SETUP", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
-[13:20:21] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="시퀀스 - 셋업 진행중", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
-[13:20:21] [Server thread/INFO]: [CatchTail] 시퀀스 - 팀 초기화 중..
-[13:20:21] [Server thread/INFO]: [CatchTail] 시퀀스 - 타이머 설정 중..
-[13:20:21] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. GAME_SETUP → COUNT_DOWN", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
-[13:20:21] [Server thread/INFO]: [CatchTail] 10분 후 PVP가 가능합니다.
-[13:20:21] [Server thread/INFO]: [CatchTail] 벤 아이템 목록 설정 중..
-[13:20:21] [Server thread/INFO]: [CatchTail] 벤 아이템 설정 중..
-[13:20:21] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임이 시작되었습니다!
-[13:20:29] [Server thread/INFO]: KimWang0906 issued server command: /ab stop
-[13:20:29] [Server thread/INFO]: [CatchTail] PVP 제한 타이머가 중지되었습니다.
-[13:20:29] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. COUNT_DOWN → STOPPED", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
-[13:20:29] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임이 관리자에 의해 종료되었습니다!
-[13:20:29] [Server thread/INFO]: [CatchTail] Stopping scoreboard task...
-[13:20:29] [Server thread/INFO]: [CatchTail] Stopped scoreboard task
-[13:20:33] [Server thread/INFO]: KimWang0906 issued server command: /ab init
-[13:20:33] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임 초기화 진행
-[13:20:33] [Server thread/INFO]: [CatchTail] 시퀀스 - 플레이어 초기화 중..
-[13:20:33] [Server thread/INFO]: [CatchTail] 시퀀스 - 오버월드 월드보더 설정 중..
-[13:20:33] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="world 월드보더 크기가 50000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
-[13:20:33] [Server thread/INFO]: [CatchTail] 시퀀스 - 네더 월드보더 설정 중..
-[13:20:33] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="world_nether 월드보더 크기가 12500으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
-[13:20:33] [Server thread/INFO]: [CatchTail] 시퀀스 - 엔드 월드보더 설정 중..
-[13:20:33] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="world_the_end 월드보더 크기가 3000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
-[13:20:33] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. STOPPED → INITIALIZED", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
-[13:20:33] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임 초기화가 완료되었습니다.
-[13:20:35] [Server thread/INFO]: KimWang0906 issued server command: /ab register KimWang0906 lighter 1
-[13:20:35] [Server thread/INFO]: [CatchTail] 시퀀스 - 플레이어 추가 중..
-[13:20:35] [Server thread/INFO]: [CatchTail] 시퀀스 - KimWang0906을 대기 목록에 추가하였습니다.
-[13:20:37] [Server thread/INFO]: KimWang0906 issued server command: /ab start
-[13:20:37] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임이 시작됩니다!
-[13:20:37] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. INITIALIZED → GAME_SETUP", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
-[13:20:37] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="시퀀스 - 셋업 진행중", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
-[13:20:37] [Server thread/INFO]: [CatchTail] 시퀀스 - 팀 초기화 중..
-[13:20:37] [Server thread/INFO]: [CatchTail] 시퀀스 - 타이머 설정 중..
-[13:20:37] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. GAME_SETUP → COUNT_DOWN", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
-[13:20:37] [Server thread/INFO]: [CatchTail] 10분 후 PVP가 가능합니다.
-[13:20:37] [Server thread/INFO]: [CatchTail] 벤 아이템 목록 설정 중..
-[13:20:37] [Server thread/INFO]: [CatchTail] 벤 아이템 설정 중..
-[13:20:37] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임이 시작되었습니다!
-[13:20:43] [Server thread/INFO]: KimWang0906 issued server command: /ab stop
-[13:20:43] [Server thread/INFO]: [CatchTail] PVP 제한 타이머가 중지되었습니다.
-[13:20:43] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. COUNT_DOWN → STOPPED", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
-[13:20:43] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임이 관리자에 의해 종료되었습니다!
-[13:20:43] [Server thread/INFO]: [CatchTail] Stopping scoreboard task...
-[13:20:43] [Server thread/INFO]: [CatchTail] Stopped scoreboard task
+[00:22:00] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[00:22:01] [ServerMain/INFO]: Loaded 1337 recipes
+[00:22:01] [ServerMain/INFO]: Loaded 1448 advancements
+[00:22:01] [Server thread/INFO]: Starting minecraft server version 1.21.3
+[00:22:01] [Server thread/INFO]: Loading properties
+[00:22:01] [Server thread/INFO]: This server is running Paper version 1.21.3-60-master@cf956ac (2024-11-24T21:39:46Z) (Implementing API version 1.21.3-R0.1-SNAPSHOT)
+[00:22:01] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[00:22:01] [Server thread/INFO]: Using 4 threads for Netty based IO
+[00:22:01] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[00:22:02] [Server thread/INFO]: [MoonriseCommon] Paper is using 3 worker threads, 1 I/O threads
+[00:22:02] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using population gen parallelism: true
+[00:22:02] [Server thread/INFO]: Default game type: SURVIVAL
+[00:22:02] [Server thread/INFO]: Generating keypair
+[00:22:02] [Server thread/INFO]: Starting Minecraft server on *:25565
+[00:22:02] [Server thread/INFO]: Using default channel type
+[00:22:02] [Server thread/INFO]: Paper: Using libdeflate (macOS ARM64 / Apple Silicon) compression from Velocity.
+[00:22:02] [Server thread/INFO]: Paper: Using native (macOS ARM64 / Apple Silicon) cipher from Velocity.
+[00:22:02] [Server thread/INFO]: [BattlePlugin] Loading server plugin BattlePlugin v1.0-SNAPSHOT
+[00:22:02] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[00:22:02] [Server thread/INFO]: Preparing level "world"
+[00:22:02] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[00:22:02] [Paper Common Worker #0/INFO]: [MCTypeRegistry] Initialising converters for DataConverter...
+[00:22:02] [Server thread/INFO]: Preparing spawn area: 0%
+[00:22:02] [Paper Common Worker #0/INFO]: [MCTypeRegistry] Finished initialising converters for DataConverter in 156.8ms
+[00:22:02] [Server thread/INFO]: Time elapsed: 469 ms
+[00:22:02] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[00:22:03] [Server thread/INFO]: Preparing spawn area: 0%
+[00:22:03] [Server thread/INFO]: Time elapsed: 88 ms
+[00:22:03] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[00:22:03] [Server thread/INFO]: Preparing spawn area: 0%
+[00:22:03] [Server thread/INFO]: Time elapsed: 34 ms
+[00:22:03] [Server thread/INFO]: [BattlePlugin] Enabling BattlePlugin v1.0-SNAPSHOT
+[00:22:03] [Server thread/INFO]: [BattlePlugin] Battle 플러그인이 활성화 되었습니다.
+[00:22:03] [Server thread/INFO]: [spark] Starting background profiler...
+[00:22:03] [Server thread/INFO]: Done preparing level "world" (1.154s)
+[00:22:03] [Server thread/INFO]: Running delayed init tasks
+[00:22:03] [Server thread/INFO]: Done (5.429s)! For help, type "help"
+[00:22:06] [User Authenticator #0/INFO]: UUID of player hspan000 is a7b09d28-9e17-42cc-9c65-bff09d246d06
+[00:22:07] [Server thread/INFO]: hspan000 joined the game
+[00:22:07] [Server thread/INFO]: hspan000[/100.77.133.2:57235] logged in with entity id 89 at ([world]62.77370050656579, 80.70354901572301, 675.5942834763172)
+[00:22:08] [User Authenticator #0/INFO]: UUID of player KimWang0906 is 94230708-9f79-487a-80f4-b3507938de6e
+[00:22:09] [Server thread/INFO]: KimWang0906 joined the game
+[00:22:09] [Server thread/INFO]: KimWang0906[/127.0.0.1:53941] logged in with entity id 201 at ([world]69.32107137745614, 64.0, 661.588022628117)
+[00:22:10] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 2597ms or 51 ticks behind
+[00:22:11] [Server thread/INFO]: hspan000 issued server command: /ab list
+[00:22:15] [Server thread/INFO]: hspan000 issued server command: /ab stop
+[00:22:15] [Server thread/INFO]: [CatchTail] Player hspan000 is now reset ability
+[00:22:15] [Server thread/INFO]: [CatchTail] Player KimWang0906 is now reset ability
+[00:22:15] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="게임상태가 변경되었습니다. STANDBY → STOPPED", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:22:15] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. STANDBY → STOPPED", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:22:15] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임이 관리자에 의해 종료되었습니다!
+[00:22:22] [Server thread/INFO]: hspan000 issued server command: /attribute hspan000 minecraft:movement_speed get
+[00:22:26] [Server thread/INFO]: hspan000 issued server command: /ab init
+[00:22:26] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임 초기화 진행
+[00:22:26] [Server thread/INFO]: [CatchTail] 시퀀스 - 플레이어 초기화 중..
+[00:22:26] [Server thread/INFO]: [CatchTail] Player hspan000 is now full condition
+[00:22:26] [Server thread/INFO]: [CatchTail] Player KimWang0906 is now full condition
+[00:22:26] [Server thread/INFO]: [CatchTail] Player hspan000 is now reset ability
+[00:22:26] [Server thread/INFO]: [CatchTail] Player KimWang0906 is now reset ability
+[00:22:26] [Server thread/INFO]: [CatchTail] 허용 아이템 설정 중..
+[00:22:26] [Server thread/INFO]: [CatchTail] 시퀀스 - 오버월드 월드보더 설정 중..
+[00:22:26] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="world 월드보더 크기가 50000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:22:26] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="world 월드보더 크기가 50000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:22:26] [Server thread/INFO]: [CatchTail] 시퀀스 - 네더 월드보더 설정 중..
+[00:22:26] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="world_nether 월드보더 크기가 12500으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:22:26] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="world_nether 월드보더 크기가 12500으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:22:26] [Server thread/INFO]: [CatchTail] 시퀀스 - 엔드 월드보더 설정 중..
+[00:22:26] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="world_the_end 월드보더 크기가 3000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:22:26] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="world_the_end 월드보더 크기가 3000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:22:26] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="게임상태가 변경되었습니다. STOPPED → INITIALIZED", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:22:26] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. STOPPED → INITIALIZED", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:22:26] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임 초기화가 완료되었습니다.
+[00:22:37] [Server thread/INFO]: hspan000 issued server command: /ab register hspan000 explorer 1
+[00:22:37] [Server thread/INFO]: [CatchTail] 시퀀스 - 플레이어 추가 중..
+[00:22:37] [Server thread/INFO]: [CatchTail] getOnlinePlayers [CraftPlayer{name=hspan000}, CraftPlayer{name=KimWang0906}]
+[00:22:37] [Server thread/INFO]: [CatchTail] 시퀀스 - hspan000을 대기 목록에 추가하였습니다.
+[00:22:44] [Server thread/INFO]: hspan000 issued server command: /ab register KimWang0906 fist 2
+[00:22:44] [Server thread/INFO]: [CatchTail] 시퀀스 - 플레이어 추가 중..
+[00:22:44] [Server thread/INFO]: [CatchTail] getOnlinePlayers [CraftPlayer{name=hspan000}, CraftPlayer{name=KimWang0906}]
+[00:22:44] [Server thread/INFO]: [CatchTail] 시퀀스 - KimWang0906을 대기 목록에 추가하였습니다.
+[00:22:48] [Server thread/INFO]: hspan000 issued server command: /ab start
+[00:22:48] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임이 시작됩니다!
+[00:22:48] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="게임상태가 변경되었습니다. INITIALIZED → GAME_SETUP", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:22:48] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. INITIALIZED → GAME_SETUP", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:22:48] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="시퀀스 - 셋업 진행중", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:22:48] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="시퀀스 - 셋업 진행중", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:22:48] [Server thread/INFO]: [CatchTail] 시퀀스 - 팀 초기화 중..
+[00:22:48] [Server thread/INFO]: [CatchTail] 시퀀스 - 타이머 설정 중..
+[00:22:48] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="게임상태가 변경되었습니다. GAME_SETUP → COUNT_DOWN", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:22:48] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. GAME_SETUP → COUNT_DOWN", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:22:48] [Server thread/INFO]: [CatchTail] 10분 후 PVP가 가능합니다.
+[00:22:48] [Server thread/INFO]: [CatchTail] 벤 아이템 목록 설정 중..
+[00:22:48] [Server thread/INFO]: [CatchTail] 벤 아이템 설정 중..
+[00:22:48] [Server thread/INFO]: [CatchTail] 게임 규칙 설정 중..
+[00:22:48] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임이 시작되었습니다!
+[00:22:48] [Server thread/INFO]: [CatchTail] Stopping scoreboard task...
+[00:22:48] [Server thread/INFO]: [CatchTail] Stopped scoreboard task
+[00:23:19] [Server thread/INFO]: [CatchTail] Current team: 1
+[00:23:19] [Server thread/INFO]: [CatchTail] Buff type: ScoreBoost
+[00:23:19] [Server thread/INFO]: [CatchTail] Requested Player: CraftPlayer{name=hspan000}
+[00:23:19] [Server thread/INFO]: [CatchTail] Team 1 Score: 10
+[00:23:19] [Server thread/INFO]: [CatchTail] Bonus: 10
+[00:23:19] [Server thread/INFO]: [CatchTail] Player Effects: []
+[00:25:00] [Server thread/INFO]: hspan000 issued server command: /ab stop
+[00:25:00] [Server thread/INFO]: [CatchTail] PVP 제한 타이머가 중지되었습니다.
+[00:25:00] [Server thread/INFO]: [CatchTail] Player hspan000 is now reset ability
+[00:25:00] [Server thread/INFO]: [CatchTail] Player KimWang0906 is now reset ability
+[00:25:00] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="게임상태가 변경되었습니다. COUNT_DOWN → STOPPED", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:25:00] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. COUNT_DOWN → STOPPED", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:25:00] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임이 관리자에 의해 종료되었습니다!
+[00:25:04] [Server thread/INFO]: hspan000 issued server command: /ab init
+[00:25:04] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임 초기화 진행
+[00:25:04] [Server thread/INFO]: [CatchTail] 시퀀스 - 플레이어 초기화 중..
+[00:25:04] [Server thread/INFO]: [CatchTail] Player hspan000 is now full condition
+[00:25:04] [Server thread/INFO]: [CatchTail] Player KimWang0906 is now full condition
+[00:25:04] [Server thread/INFO]: [CatchTail] Player hspan000 is now reset ability
+[00:25:04] [Server thread/INFO]: [CatchTail] Player KimWang0906 is now reset ability
+[00:25:04] [Server thread/INFO]: [CatchTail] 허용 아이템 설정 중..
+[00:25:04] [Server thread/INFO]: [CatchTail] 시퀀스 - 오버월드 월드보더 설정 중..
+[00:25:04] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="world 월드보더 크기가 50000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:25:04] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="world 월드보더 크기가 50000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:25:04] [Server thread/INFO]: [CatchTail] 시퀀스 - 네더 월드보더 설정 중..
+[00:25:04] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="world_nether 월드보더 크기가 12500으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:25:04] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="world_nether 월드보더 크기가 12500으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:25:04] [Server thread/INFO]: [CatchTail] 시퀀스 - 엔드 월드보더 설정 중..
+[00:25:04] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="world_the_end 월드보더 크기가 3000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:25:04] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="world_the_end 월드보더 크기가 3000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:25:04] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="게임상태가 변경되었습니다. STOPPED → INITIALIZED", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:25:04] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. STOPPED → INITIALIZED", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:25:04] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임 초기화가 완료되었습니다.
+[00:25:17] [Server thread/INFO]: hspan000 issued server command: /ab register hspan000 explorer 1
+[00:25:17] [Server thread/INFO]: [CatchTail] 시퀀스 - 플레이어 추가 중..
+[00:25:17] [Server thread/INFO]: [CatchTail] getOnlinePlayers [CraftPlayer{name=hspan000}, CraftPlayer{name=KimWang0906}]
+[00:25:17] [Server thread/INFO]: [CatchTail] 시퀀스 - hspan000을 대기 목록에 추가하였습니다.
+[00:25:23] [Server thread/INFO]: hspan000 issued server command: /ab register KimWang0906 fist 2
+[00:25:23] [Server thread/INFO]: [CatchTail] 시퀀스 - 플레이어 추가 중..
+[00:25:23] [Server thread/INFO]: [CatchTail] getOnlinePlayers [CraftPlayer{name=hspan000}, CraftPlayer{name=KimWang0906}]
+[00:25:23] [Server thread/INFO]: [CatchTail] 시퀀스 - KimWang0906을 대기 목록에 추가하였습니다.
+[00:25:26] [Server thread/INFO]: hspan000 issued server command: /ab start
+[00:25:26] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임이 시작됩니다!
+[00:25:26] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="게임상태가 변경되었습니다. INITIALIZED → GAME_SETUP", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:25:26] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. INITIALIZED → GAME_SETUP", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:25:26] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="시퀀스 - 셋업 진행중", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:25:26] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="시퀀스 - 셋업 진행중", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:25:26] [Server thread/INFO]: [CatchTail] 시퀀스 - 팀 초기화 중..
+[00:25:26] [Server thread/INFO]: [CatchTail] 시퀀스 - 타이머 설정 중..
+[00:25:26] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="게임상태가 변경되었습니다. GAME_SETUP → COUNT_DOWN", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:25:26] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. GAME_SETUP → COUNT_DOWN", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:25:26] [Server thread/INFO]: [CatchTail] 10분 후 PVP가 가능합니다.
+[00:25:26] [Server thread/INFO]: [CatchTail] 벤 아이템 목록 설정 중..
+[00:25:26] [Server thread/INFO]: [CatchTail] 벤 아이템 설정 중..
+[00:25:26] [Server thread/INFO]: [CatchTail] 게임 규칙 설정 중..
+[00:25:26] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임이 시작되었습니다!
+[00:25:26] [Server thread/INFO]: [CatchTail] Stopping scoreboard task...
+[00:25:26] [Server thread/INFO]: [CatchTail] Stopped scoreboard task
+[00:26:54] [Server thread/INFO]: hspan000 issued server command: /attribute hspan000 minecraft:movement_speed get
+[00:26:57] [Server thread/INFO]: hspan000 lost connection: Disconnected
+[00:26:58] [Server thread/INFO]: hspan000 left the game
+[00:27:14] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[00:27:14] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[00:27:14] [Server thread/INFO]: Using 4 threads for Netty based IO
+[00:27:14] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[00:27:14] [Server thread/INFO]: [MoonriseCommon] Paper is using 3 worker threads, 1 I/O threads
+[00:27:14] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using population gen parallelism: true
+[00:27:14] [Server thread/INFO]: [BattlePlugin] Disabling BattlePlugin v1.0-SNAPSHOT
+[00:27:14] [Server thread/INFO]: [BattlePlugin] Battle 플러그인이 비활성화 되었습니다.
+[00:27:14] [Server thread/INFO]: Loaded 1337 recipes
+[00:27:14] [Server thread/INFO]: Loaded 1448 advancements
+[00:27:14] [Server thread/INFO]: [PluginInitializerManager] Initializing plugins...
+[00:27:14] [Paper Async Command Builder Thread Pool - 1/ERROR]: Caught previously unhandled exception :
+[00:27:14] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins/BattlePlugin-1.0-SNAPSHOT.jar'...
+[00:27:14] [Paper Async Command Builder Thread Pool - 1/ERROR]: Paper Async Command Builder Thread Pool - 1
+java.util.ConcurrentModificationException: null
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:1023) ~[?:?]
+	at java.base/java.util.LinkedHashMap$LinkedValueIterator.next(LinkedHashMap.java:1052) ~[?:?]
+	at net.minecraft.commands.Commands.fillUsableCommands(Commands.java:536) ~[paper-1.21.3.jar:1.21.3-60-cf956ac]
+	at net.minecraft.commands.Commands.sendAsync(Commands.java:501) ~[paper-1.21.3.jar:1.21.3-60-cf956ac]
+	at net.minecraft.commands.Commands.lambda$sendCommands$6(Commands.java:480) ~[paper-1.21.3.jar:1.21.3-60-cf956ac]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[00:27:14] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins/BattlePlugin-1.0-SNAPSHOT.jar' in 149ms.
+[00:27:14] [Server thread/INFO]: [PluginInitializerManager] Initialized 1 plugin
+[00:27:14] [Server thread/INFO]: [PluginInitializerManager] Bukkit plugins (1):
+ - BattlePlugin (1.0-SNAPSHOT)
+[00:27:14] [Server thread/INFO]: [BattlePlugin] Loading server plugin BattlePlugin v1.0-SNAPSHOT
+[00:27:14] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[00:27:14] [Server thread/INFO]: [BattlePlugin] Enabling BattlePlugin v1.0-SNAPSHOT
+[00:27:14] [Server thread/INFO]: [BattlePlugin] Battle 플러그인이 활성화 되었습니다.
+[00:27:14] [Server thread/INFO]: CONSOLE: Reload complete.
+[00:27:39] [Server thread/INFO]: KimWang0906 issued server command: /kill @e
+[00:27:39] [Server thread/INFO]: KimWang0906 was killed
+[00:27:40] [Server thread/INFO]: [KimWang0906: Killed 225 entities]
+[00:27:49] [User Authenticator #1/INFO]: UUID of player hspan000 is a7b09d28-9e17-42cc-9c65-bff09d246d06
+[00:27:50] [Server thread/INFO]: hspan000 joined the game
+[00:27:50] [Server thread/INFO]: hspan000[/100.77.133.2:57286] logged in with entity id 1267 at ([world]76.87473010581981, 71.0, 753.6972783409657)
+[00:27:56] [Server thread/INFO]: KimWang0906 issued server command: /time set 0
+[00:27:56] [Server thread/INFO]: [KimWang0906: Set the time to 0]
+[00:27:57] [Server thread/INFO]: KimWang0906 was slain by Zombie
+[00:28:02] [Server thread/INFO]: hspan000 issued server command: /ab stop
+[00:28:02] [Server thread/INFO]: [CatchTail] Player hspan000 is now reset ability
+[00:28:02] [Server thread/INFO]: [CatchTail] Player KimWang0906 is now reset ability
+[00:28:02] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="게임상태가 변경되었습니다. STANDBY → STOPPED", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:28:02] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. STANDBY → STOPPED", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:28:02] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임이 관리자에 의해 종료되었습니다!
+[00:28:05] [Server thread/INFO]: hspan000 issued server command: /ab init
+[00:28:05] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임 초기화 진행
+[00:28:05] [Server thread/INFO]: [CatchTail] 시퀀스 - 플레이어 초기화 중..
+[00:28:05] [Server thread/INFO]: [CatchTail] Player hspan000 is now full condition
+[00:28:05] [Server thread/INFO]: [CatchTail] Player KimWang0906 is now full condition
+[00:28:05] [Server thread/INFO]: [CatchTail] Player hspan000 is now reset ability
+[00:28:05] [Server thread/INFO]: [CatchTail] Player KimWang0906 is now reset ability
+[00:28:05] [Server thread/INFO]: [CatchTail] 허용 아이템 설정 중..
+[00:28:05] [Server thread/INFO]: [CatchTail] 시퀀스 - 오버월드 월드보더 설정 중..
+[00:28:05] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="world 월드보더 크기가 50000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:28:05] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="world 월드보더 크기가 50000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:28:05] [Server thread/INFO]: [CatchTail] 시퀀스 - 네더 월드보더 설정 중..
+[00:28:05] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="world_nether 월드보더 크기가 12500으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:28:05] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="world_nether 월드보더 크기가 12500으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:28:05] [Server thread/INFO]: [CatchTail] 시퀀스 - 엔드 월드보더 설정 중..
+[00:28:05] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="world_the_end 월드보더 크기가 3000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:28:05] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="world_the_end 월드보더 크기가 3000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:28:05] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="게임상태가 변경되었습니다. STOPPED → INITIALIZED", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:28:05] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. STOPPED → INITIALIZED", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:28:05] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임 초기화가 완료되었습니다.
+[00:28:15] [Server thread/INFO]: hspan000 issued server command: /ab register hspan000 explorer 1
+[00:28:15] [Server thread/INFO]: [CatchTail] 시퀀스 - 플레이어 추가 중..
+[00:28:15] [Server thread/INFO]: [CatchTail] getOnlinePlayers [CraftPlayer{name=hspan000}, CraftPlayer{name=KimWang0906}]
+[00:28:15] [Server thread/INFO]: [CatchTail] 시퀀스 - hspan000을 대기 목록에 추가하였습니다.
+[00:28:25] [Server thread/INFO]: hspan000 issued server command: /ab register KimWang0906 fist 2
+[00:28:25] [Server thread/INFO]: [CatchTail] 시퀀스 - 플레이어 추가 중..
+[00:28:25] [Server thread/INFO]: [CatchTail] getOnlinePlayers [CraftPlayer{name=hspan000}, CraftPlayer{name=KimWang0906}]
+[00:28:25] [Server thread/INFO]: [CatchTail] 시퀀스 - KimWang0906을 대기 목록에 추가하였습니다.
+[00:28:28] [Server thread/INFO]: hspan000 issued server command: /ab start
+[00:28:28] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임이 시작됩니다!
+[00:28:28] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="게임상태가 변경되었습니다. INITIALIZED → GAME_SETUP", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:28:28] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. INITIALIZED → GAME_SETUP", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:28:28] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="시퀀스 - 셋업 진행중", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:28:28] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="시퀀스 - 셋업 진행중", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:28:28] [Server thread/INFO]: [CatchTail] 시퀀스 - 팀 초기화 중..
+[00:28:28] [Server thread/INFO]: [CatchTail] 시퀀스 - 타이머 설정 중..
+[00:28:28] [Server thread/INFO]: [CatchTail] hspan000  -  TextComponentImpl{content="게임상태가 변경되었습니다. GAME_SETUP → COUNT_DOWN", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:28:28] [Server thread/INFO]: [CatchTail] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. GAME_SETUP → COUNT_DOWN", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[00:28:28] [Server thread/INFO]: [CatchTail] 10분 후 PVP가 가능합니다.
+[00:28:28] [Server thread/INFO]: [CatchTail] 벤 아이템 목록 설정 중..
+[00:28:28] [Server thread/INFO]: [CatchTail] 벤 아이템 설정 중..
+[00:28:28] [Server thread/INFO]: [CatchTail] 게임 규칙 설정 중..
+[00:28:28] [Server thread/INFO]: [CatchTail] 시퀀스 - 게임이 시작되었습니다!
+[00:28:46] [Server thread/INFO]: [CatchTail] Current team: 1
+[00:28:46] [Server thread/INFO]: [CatchTail] Buff type: ScoreBoost
+[00:28:46] [Server thread/INFO]: [CatchTail] Requested Player: CraftPlayer{name=hspan000}
+[00:28:46] [Server thread/INFO]: [CatchTail] Team 1 Score: 10
+[00:28:46] [Server thread/INFO]: [CatchTail] Bonus: 10
+[00:28:46] [Server thread/INFO]: [CatchTail] Player Effects: []

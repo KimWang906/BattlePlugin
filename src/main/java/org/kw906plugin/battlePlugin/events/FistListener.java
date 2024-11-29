@@ -31,7 +31,7 @@ public class FistListener implements Listener {
         if ((event.getDamager() instanceof Player player) && hasAbility(player, FistAbility.class)) {
             AttributeInstance attr = player.getAttribute(Attribute.MAX_HEALTH);
             if (attr != null) {
-                player.setHealth(attr.getDefaultValue() * BASE_HEALTH);
+                attr.setBaseValue(attr.getDefaultValue() * BASE_HEALTH);
                 event.setDamage(BASE_ATTACK_DAMAGE);
             }
         }
@@ -44,12 +44,12 @@ public class FistListener implements Listener {
         if (hasAbility(player, FistAbility.class)) {
             ItemStack item = event.getItem();
             if (item != null && item.getType() == Material.NETHERITE_INGOT) {
-                double newHealth = Math.min(player.getHealth() + NETHERITE_INCREASE_HEALTH, MAX_ALLOWED_HEALTH);
                 AttributeInstance attr = player.getAttribute(Attribute.MAX_HEALTH);
                 if (attr != null) {
+                    double newHealth = Math.min(player.getHealth() + NETHERITE_INCREASE_HEALTH, MAX_ALLOWED_HEALTH);
                     attr.setBaseValue(newHealth);
+                    item.setAmount(item.getAmount() - 1);
                 }
-                item.setAmount(item.getAmount() - 1);
             }
         }
     }

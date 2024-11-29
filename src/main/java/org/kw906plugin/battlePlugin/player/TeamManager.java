@@ -12,7 +12,9 @@ import org.kw906plugin.battlePlugin.commands.Sequence;
 import org.kw906plugin.battlePlugin.prepared_ability.AbilityManager;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import static org.kw906plugin.battlePlugin.BattlePlugin.config;
 
@@ -20,7 +22,7 @@ public class TeamManager {
     private static HashMap<Integer, Integer> teamScore;
     private static final long MAX_SCORE = config.maxScore;
     private static int taskId = -1; // taskId를 저장할 변수
-    private static boolean forcedStop = false;
+    private static boolean forcedStop;
     private static Objective objective;
     private static Scoreboard scoreboard;
 
@@ -28,6 +30,7 @@ public class TeamManager {
         if (scoreboard != null) {
             scoreboard.getEntries().forEach(scoreboard::resetScores);
         }
+        forcedStop = false;
         teamScore = new HashMap<>();
         teamScore.put(1, 0);
         teamScore.put(2, 0);
@@ -135,5 +138,17 @@ public class TeamManager {
                 Title.Times.times(Duration.ofSeconds(3), Duration.ofSeconds(10), Duration.ofSeconds(3))
         );
         Sequence.stop();
+    }
+
+    public static ArrayList<Player> findMyTeams(int teamIdx) {
+        ArrayList<Player> teamsList = new ArrayList<>();
+
+        for (BattlePlayer battlePlayer : AbilityManager.getPlayers()) {
+            if (battlePlayer.getTeamIndex() == teamIdx) {
+                teamsList.add(battlePlayer.getPlayer());
+            }
+        }
+
+        return teamsList;
     }
 }

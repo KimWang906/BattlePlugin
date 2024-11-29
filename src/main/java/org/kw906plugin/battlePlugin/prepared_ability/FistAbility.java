@@ -1,5 +1,7 @@
 package org.kw906plugin.battlePlugin.prepared_ability;
 
+import org.bukkit.attribute.Attribute;
+import org.bukkit.attribute.AttributeInstance;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -9,6 +11,14 @@ public class FistAbility extends Ability {
     public FistAbility(Player player) {
         setName("주먹");
         setDescription("기본 체력 10, 기본 공격력 6, 포화 상태에서 능력 발동, 네더라이트 주괴 사용 시 체력 증가.");
+        AttributeInstance attr = player.getAttribute(Attribute.MAX_HEALTH);
+        if (attr != null) {
+            attr.setBaseValue(10);
+        }
+        applyEffect(player);
+    }
+
+    public static void applyEffect(Player player) {
         player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, Integer.MAX_VALUE, 1));
     }
 }
