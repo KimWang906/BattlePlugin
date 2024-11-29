@@ -19,7 +19,5 @@ public class ArrowAbility extends Ability {
             double speed = config.arrowAbilityConfig.speed;
             speedAttribute.setBaseValue(speed);
         }
-
-        AbilityManager.limitItems(player);
     }
 }

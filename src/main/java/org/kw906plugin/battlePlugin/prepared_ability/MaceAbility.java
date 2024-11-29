@@ -25,8 +25,8 @@ public class MaceAbility extends Ability {
         setName("철퇴");
         setDescription("철퇴를 들고 있으면 낙하 피해가 무효화되고, 점프가 강화됩니다.");
         addRequiredItems(new ItemStack(MACE_MATERIAL));
-        AbilityManager.limitItems(player);
         onHasAbility();
+        player.getInventory().addItem(new ItemStack(MACE_MATERIAL));
     }
 
     public void onHasAbility() {

@@ -33,7 +33,6 @@ public final class BattlePlugin extends JavaPlugin {
         new AxeListener(this);
         new TridentListener(this);
         new FistListener(this);
-        new CrossbowListener(this);
         new StickListener(this);
         new MaceListener(this);
         new FishingRodListener(this);

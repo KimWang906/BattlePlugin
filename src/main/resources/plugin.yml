@@ -1,5 +1,5 @@
 name: BattlePlugin
-version: '1.0-SNAPSHOT'
+version: '1.0-BETA'
 main: org.kw906plugin.battlePlugin.BattlePlugin
 api-version: '1.21.3'
 commands:

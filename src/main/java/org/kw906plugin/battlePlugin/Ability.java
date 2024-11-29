@@ -30,7 +30,7 @@ public class Ability {
         this.description = description;
     }
 
-    public static ArrayList<ItemStack> getRequiredItems() {
+    public ArrayList<ItemStack> getRequiredItems() {
         return requiredItems;
     }
 

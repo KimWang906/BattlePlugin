@@ -77,10 +77,9 @@ public class AbilityManager {
         return ability != null && ability.getClass().equals(abilityClass);
     }
 
-    public static void limitItems(Player master) {
-        for (ItemStack item : Ability.getRequiredItems()) {
+    public static void limitItems(BattlePlayer master) {
+        for (ItemStack item : master.getAbility().getRequiredItems()) {
             NamespacedKey recipe = item.getType().getKey();
-            master.discoverRecipe(recipe);
             for (BattlePlayer battlePlayer : AbilityManager.getPlayers()) {
                 if (!battlePlayer.getPlayer().equals(master)) {
                     battlePlayer.getPlayer().undiscoverRecipe(recipe);

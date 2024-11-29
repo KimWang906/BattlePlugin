@@ -18,6 +18,5 @@ public class AxeAbility extends Ability {
                 new ItemStack(Material.DIAMOND_AXE),
                 new ItemStack(Material.NETHERITE_AXE)
         );
-        AbilityManager.limitItems(player);
     }
 }

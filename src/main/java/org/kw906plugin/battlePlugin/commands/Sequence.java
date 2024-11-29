@@ -117,6 +117,9 @@ public class Sequence {
             world.setGameRule(GameRule.DO_LIMITED_CRAFTING, false);
             world.setGameRule(GameRule.PLAYERS_SLEEPING_PERCENTAGE, 50);
         }
+        for (BattlePlayer battlePlayer : AbilityManager.getPlayers()) {
+            AbilityManager.limitItems(battlePlayer);
+        }
     }
 
     public static void register(String name, String ability, int teamIndex) {

@@ -2,6 +2,7 @@ package org.kw906plugin.battlePlugin.events;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
+import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.GameRule;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -71,6 +72,7 @@ public class NoPvPEvent implements Listener {
                 SendMessage.sendActionBar(
                         (Player) event.getDamager(),
                         Component.text("PVP는 " + config.noPVPCount + "분 후에 가능합니다!")
+                                 .color(NamedTextColor.RED).decorate(TextDecoration.BOLD)
                 );
             }
         }

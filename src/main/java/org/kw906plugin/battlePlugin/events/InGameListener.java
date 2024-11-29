@@ -4,17 +4,19 @@ import net.kyori.adventure.text.Component;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeInstance;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Projectile;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.PlayerDeathEvent;
-import org.bukkit.event.entity.ProjectileHitEvent;
+import org.bukkit.event.entity.*;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.CrossbowMeta;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.potion.PotionEffect;
@@ -27,9 +29,10 @@ import org.kw906plugin.battlePlugin.player.BattlePlayer;
 import org.kw906plugin.battlePlugin.player.TeamManager;
 import org.kw906plugin.battlePlugin.prepared_ability.*;
 
+import java.util.*;
+
 import static org.kw906plugin.battlePlugin.prepared_ability.AbilityManager.hasAbility;
-import static org.kw906plugin.battlePlugin.prepared_ability.CrossbowAbility.applyBuffToShooter;
-import static org.kw906plugin.battlePlugin.prepared_ability.CrossbowAbility.hitPlayers;
+import static org.kw906plugin.battlePlugin.prepared_ability.CrossbowAbility.*;
 import static org.kw906plugin.battlePlugin.prepared_ability.ExplorerAbility.*;
 import static org.kw906plugin.battlePlugin.prepared_ability.ExplorerAbility.abilityUsedMap;
 import static org.kw906plugin.battlePlugin.prepared_ability.WizardAbility.*;
@@ -82,32 +85,33 @@ public class InGameListener implements Listener {
     }
 
     @EventHandler
-    public void onProjectileHit(ProjectileHitEvent event) {
-        Projectile projectile = event.getEntity();
-        if (projectile.getShooter() instanceof Player shooter &&
-                hasAbility(shooter, CrossbowAbility.class)) {
-            if (projectile instanceof Arrow) {
-                Entity hitEntity = event.getHitEntity();
-                if (hitEntity instanceof Player) {
-                    hitPlayers.add((Player) hitEntity);
-                }
-                if (hitPlayers.size() >= 2) {
-                    applyBuffToShooter(shooter);
-                    hitPlayers.clear();
+    public void onProjectileLaunch(ProjectileLaunchEvent event) {
+        if (event.getEntity() instanceof Arrow arrow
+                && hasAbility((Player) arrow.getShooter(), CrossbowAbility.class)) {
+            if (arrow.getShooter() instanceof Player player) {
+                if (player.getInventory().getItemInMainHand().getType() == Material.CROSSBOW) {
+                    ItemStack crossbow = player.getInventory().getItemInMainHand();
+                    if (crossbow.containsEnchantment(Enchantment.MULTISHOT)) {
+                        multishotArrows.add(arrow.getUniqueId());
+                    }
                 }
             }
         }
     }
 
     @EventHandler
-    public void onPlayerShoot(PlayerInteractEvent event) {
-        Player player = event.getPlayer();
-        ItemStack item = player.getInventory().getItemInMainHand();
-
-        if (item.getType().equals(Material.CROSSBOW) && event.getAction().isRightClick()) {
-            player.sendMessage("쇠뇌를 발사했습니다!");
+    public void onEntityDamageByEntity(EntityDamageByEntityEvent event) {
+        if (event.getDamager() instanceof Arrow arrow &&
+                hasAbility((Player) arrow.getShooter(), CrossbowAbility.class)) {
+            if (multishotArrows.contains(arrow.getUniqueId())) {
+                Entity victim = event.getEntity();
+                hitPlayers.add((Player) victim);
+                SendMessage.logConsole("맞은 사람: " + victim);
+                multishotArrows.remove(arrow.getUniqueId());
+            }
         }
     }
+
 
     // Global
     @EventHandler
@@ -119,7 +123,6 @@ public class InGameListener implements Listener {
                 if (Status.isRunning()) {
                     explorerRestorePlayerState(respawnedPlayer);
                     LighterAbility.applyEffect(respawnedPlayer);
-                    CrossbowAbility.onDeathCrossbow(respawnedPlayer);
                     if (hasAbility(respawnedPlayer, FistAbility.class)) {
                         FistAbility.applyEffect(respawnedPlayer);
                     }

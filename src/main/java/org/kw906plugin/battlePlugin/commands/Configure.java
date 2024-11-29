@@ -23,7 +23,6 @@ public class Configure {
     public FistAbilityConfig fistAbilityConfig;
     public CrossbowAbilityConfig crossbowAbilityConfig;
     public MaceAbilityConfig maceAbilityConfig;
-    public SnowballAbilityConfig snowballAbilityConfig;
     public FishingRodAbilityConfig fishingRodAbilityConfig;
     public LighterAbilityConfig lighterAbilityConfig;
     public ExplorerAbilityConfig explorerAbilityConfig;
@@ -53,11 +52,11 @@ public class Configure {
         fistAbilityConfig = new FistAbilityConfig(config);
         crossbowAbilityConfig = new CrossbowAbilityConfig(config);
         maceAbilityConfig = new MaceAbilityConfig(config);
-        snowballAbilityConfig = new SnowballAbilityConfig(config);
         fishingRodAbilityConfig = new FishingRodAbilityConfig(config);
         lighterAbilityConfig = new LighterAbilityConfig(config);
         explorerAbilityConfig = new ExplorerAbilityConfig(config);
         wizardAbilityConfig = new WizardAbilityConfig(config);
+        crossbowAbilityConfig = new CrossbowAbilityConfig(config);
 
         // 최종 설정 저장
         saveAllConfigs();
@@ -242,18 +241,24 @@ public class Configure {
     }
 
     public static class CrossbowAbilityConfig extends AbilityConfig {
-        public double speedMultiplier;
-        public double maxSpeedIncrease;
+        public double crossbowSpeed;
+        public int speedDuration;
+        public int invisibilityDuration;
+        public int speedAmplifier;
 
         public CrossbowAbilityConfig(FileConfiguration config) {
             super(config);
-            speedMultiplier = config.getDouble("ability.cross.speed_multiplier", 0.03);
-            maxSpeedIncrease = config.getDouble("ability.cross.max_speed_increase", 0.3);
+            crossbowSpeed = config.getDouble("ability.crossbow.speed", 0.12);
+            speedDuration = config.getInt("ability.crossbow.speed_duration", 60);
+            invisibilityDuration = config.getInt("ability.crossbow.invisibility_duration", 60);
+            speedAmplifier = config.getInt("ability.crossbow.speed_amplifier", 1);
         }
 
         public void saveAbilityConfig(FileConfiguration config) {
-            config.set("ability.cross.speed_multiplier", speedMultiplier);
-            config.set("ability.cross.max_speed_increase", maxSpeedIncrease);
+            config.set("ability.crossbow.speed", crossbowSpeed);
+            config.set("ability.crossbow.speed_duration", speedDuration);
+            config.set("ability.crossbow.invisibility_duration", invisibilityDuration);
+            config.set("ability.crossbow.speed_amplifier", speedAmplifier);
         }
     }
 
@@ -261,34 +266,11 @@ public class Configure {
         public double jumpBoostMultiplier;
         public MaceAbilityConfig(FileConfiguration config) {
             super(config);
-            jumpBoostMultiplier = config.getDouble("ability.mace.jump_boost_multiplier", 2);
+            jumpBoostMultiplier = config.getDouble("ability.mace.jump_boost_multiplier", 1.2);
         }
 
         public void saveAbilityConfig(FileConfiguration config) {
             config.set("ability.mace.jump_boost_multiplier", jumpBoostMultiplier);
-        }
-    }
-
-    public static class SnowballAbilityConfig extends AbilityConfig {
-        public int potionDuration;
-        public int slownessAmplifier;
-        public int miningFatigueAmplifier;
-        public int throwSpeed;
-        public long additionalDamage;
-
-        public SnowballAbilityConfig(FileConfiguration config) {
-            super(config);
-            this.potionDuration = config.getInt("ability.snowball.potion_duration", 20);
-            this.slownessAmplifier = config.getInt("ability.snowball.slowness_amplifier", 1);
-            this.miningFatigueAmplifier = config.getInt("ability.snowball.mining_fatigue_amplifier", 1);
-            this.additionalDamage = config.getLong("ability.snowball.additional_damage", 5);
-            this.throwSpeed = config.getInt("ability.snowball.throw_speed", 2);
-        }
-
-        public void saveAbilityConfig(FileConfiguration config) {
-            config.set("ability.snowball.potion_duration", potionDuration);
-            config.set("ability.snowball.slowness_amplifier", slownessAmplifier);
-            config.set("ability.snowball.mining_fatigue_amplifier", miningFatigueAmplifier);
         }
     }
 
@@ -332,7 +314,7 @@ public class Configure {
             super(config);
             strengthAmplifier = config.getInt("ability.explorer.strength_amplifier", 1);
             hasteAmplifier = config.getInt("ability.explorer.haste_amplifier", 0);
-            regenerationAmplifier = config.getInt("ability.explorer.regeneration_amplifier", 2);
+            regenerationAmplifier = config.getInt("ability.explorer.regeneration_amplifier", 1);
             additionalHealth = config.getInt("ability.explorer.additionalHealth", 10);
             fallingDamage = config.getDouble("ability.explorer.falling_damage", 0.3);
             bonusScore = config.getInt("ability.explorer.bonus_score", 10);
@@ -395,7 +377,6 @@ public class Configure {
         fistAbilityConfig.saveAbilityConfig(config);
         crossbowAbilityConfig.saveAbilityConfig(config);
         maceAbilityConfig.saveAbilityConfig(config);
-        snowballAbilityConfig.saveAbilityConfig(config);
         fishingRodAbilityConfig.saveAbilityConfig(config);
         lighterAbilityConfig.saveAbilityConfig(config);
         explorerAbilityConfig.saveAbilityConfig(config);
