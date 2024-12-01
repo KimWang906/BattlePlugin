@@ -13,7 +13,7 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public final class BattlePlugin extends JavaPlugin {
-    public final static String version = "1.0.0";
+    public final static String version = "1.1.0";
     public final static String name = "AbilityBattle";
     public static Configure config;
     public static final ArrayList<NamespacedKey> recipeKeys = new ArrayList<>();
