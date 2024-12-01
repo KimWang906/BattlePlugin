@@ -72,6 +72,10 @@ public class Sequence {
                     worldConfig.getTheEnd(),
                     worldBorderConfig.getEndWorldBorderSize()
             );
+
+            SendMessage.broadcastMessage(Component.text("시퀀스 - 스코어보드 초기화 중..")
+                                                  .color(NamedTextColor.GRAY));
+            TeamManager.initScoreboard();
         } catch (NullPointerException e) {
             SendMessage.broadcastMessage(Component.text("게임 초기화 도중 오류가 발생하였습니다.")
                                                   .color(NamedTextColor.RED));
@@ -98,7 +102,6 @@ public class Sequence {
                                            .color(NamedTextColor.GRAY)
         );
         SendMessage.broadcastMessage(Component.text("시퀀스 - 팀 초기화 중.."));
-        TeamManager.initScoreboard();
         TeamManager.showScoreboard();
         SendMessage.broadcastMessage(Component.text("시퀀스 - 타이머 설정 중.."));
         NoPvPEvent.startPvPTimer();

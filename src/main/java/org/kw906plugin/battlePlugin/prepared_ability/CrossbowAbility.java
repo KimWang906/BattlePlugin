@@ -68,4 +68,8 @@ public class CrossbowAbility extends Ability {
         SendMessage.sendActionBar(shooter, Component.text("이동속도 증가 및 투명화가 적용되었습니다.")
                                                     .color(NamedTextColor.DARK_GRAY).decorate(TextDecoration.BOLD));
     }
+
+    public static String getAbilityName() {
+        return "crossbow";
+    }
 }

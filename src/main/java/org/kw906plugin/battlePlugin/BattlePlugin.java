@@ -9,11 +9,12 @@ import org.kw906plugin.battlePlugin.commands.MainController;
 import org.kw906plugin.battlePlugin.events.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Objects;
 
 public final class BattlePlugin extends JavaPlugin {
     public final static String version = "1.0.0";
-    public final static String name = "CatchTail";
+    public final static String name = "AbilityBattle";
     public static Configure config;
     public static final ArrayList<NamespacedKey> recipeKeys = new ArrayList<>();
 
@@ -32,7 +33,6 @@ public final class BattlePlugin extends JavaPlugin {
         new ShieldListener(this);
         new AxeListener(this);
         new TridentListener(this);
-        new FistListener(this);
         new StickListener(this);
         new MaceListener(this);
         new FishingRodListener(this);

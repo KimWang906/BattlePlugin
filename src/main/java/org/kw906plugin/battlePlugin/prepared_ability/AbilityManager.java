@@ -95,4 +95,21 @@ public class AbilityManager {
             }
         }
     }
+
+    public static List<String> getAllAbilityNames() {
+        return new ArrayList<>(List.of(
+                ArrowAbility.getAbilityName(),
+                AxeAbility.getAbilityName(),
+                CrossbowAbility.getAbilityName(),
+                ExplorerAbility.getAbilityName(),
+                FishingRodAbility.getAbilityName(),
+                FistAbility.getAbilityName(),
+                LighterAbility.getAbilityName(),
+                MaceAbility.getAbilityName(),
+                ShieldAbility.getAbilityName(),
+                TridentAbility.getAbilityName(),
+                WizardAbility.getAbilityName(),
+                StickAbility.getAbilityName()
+        ));
+    }
 }

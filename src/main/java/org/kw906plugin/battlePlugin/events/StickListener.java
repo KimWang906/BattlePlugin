@@ -54,7 +54,6 @@ public class StickListener implements Listener {
     public void onPlayerDeath(PlayerDeathEvent event) {
         Player player = event.getEntity();
         if (hasAbility(player, StickAbility.class)) {
-            // 플레이어 사망 시 누적 데미지 감소
             playerDamageTemp *= (1 - DEATH_DAMAGE_REDUCTION);
         }
     }

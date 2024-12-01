@@ -19,4 +19,8 @@ public class AxeAbility extends Ability {
                 new ItemStack(Material.NETHERITE_AXE)
         );
     }
+
+    public static String getAbilityName() {
+        return "axe";
+    }
 }

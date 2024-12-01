@@ -82,23 +82,23 @@ public class ExplorerAbility extends Ability {
 
         switch (buffType) {
             case "WaterBreathing":
-                player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, Integer.MAX_VALUE, 1, false, false));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, PotionEffect.INFINITE_DURATION, 1, false, false));
                 SendMessage.logConsole("added water breathing");
                 break;
             case "FireResistance":
-                player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Integer.MAX_VALUE, 1, false, false));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, PotionEffect.INFINITE_DURATION, 1, false, false));
                 SendMessage.logConsole("added fire resistance");
                 break;
             case "Haste":
-                player.addPotionEffect(new PotionEffect(PotionEffectType.HASTE, Integer.MAX_VALUE, hasteAmplifier, false, false));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.HASTE, PotionEffect.INFINITE_DURATION, hasteAmplifier, false, false));
                 SendMessage.logConsole("added haste");
                 break;
             case "Strength":
-                boolean success = player.addPotionEffect(new PotionEffect(PotionEffectType.STRENGTH, Integer.MAX_VALUE, strengthAmplifier, false, false));
+                boolean success = player.addPotionEffect(new PotionEffect(PotionEffectType.STRENGTH, PotionEffect.INFINITE_DURATION, strengthAmplifier, false, false));
                 SendMessage.logConsole("added strength" + success);
                 break;
             case "Regeneration":
-                player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, Integer.MAX_VALUE, regenerationAmplifier, false, false));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, PotionEffect.INFINITE_DURATION, regenerationAmplifier, false, false));
                 SendMessage.logConsole("added regeneration");
                 break;
             case "Absorption":
@@ -145,5 +145,9 @@ public class ExplorerAbility extends Ability {
                 }
             });
         }
+    }
+
+    public static String getAbilityName() {
+        return "explorer";
     }
 }

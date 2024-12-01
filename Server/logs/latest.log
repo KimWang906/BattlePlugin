@@ -1,86 +1,162 @@
-[01:17:51] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.5; Homebrew Homebrew) on Mac OS X 15.1.1 (aarch64)
-[01:17:51] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.3-60-master@cf956ac (2024-11-24T21:39:46Z) for Minecraft 1.21.3
-[01:17:51] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
-[01:17:51] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins/BattlePlugin-1.0-SNAPSHOT.jar'...
-[01:17:52] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins/BattlePlugin-1.0-SNAPSHOT.jar' in 239ms.
-[01:17:52] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
-[01:17:52] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
- - BattlePlugin (1.0-SNAPSHOT)
-[01:17:53] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[01:17:54] [ServerMain/INFO]: Loaded 1337 recipes
-[01:17:54] [ServerMain/INFO]: Loaded 1448 advancements
-[01:17:54] [Server thread/INFO]: Starting minecraft server version 1.21.3
-[01:17:54] [Server thread/INFO]: Loading properties
-[01:17:54] [Server thread/INFO]: This server is running Paper version 1.21.3-60-master@cf956ac (2024-11-24T21:39:46Z) (Implementing API version 1.21.3-R0.1-SNAPSHOT)
-[01:17:54] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
-[01:17:54] [Server thread/INFO]: Using 4 threads for Netty based IO
-[01:17:54] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[01:17:55] [Server thread/INFO]: [MoonriseCommon] Paper is using 3 worker threads, 1 I/O threads
-[01:17:55] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using population gen parallelism: true
-[01:17:55] [Server thread/INFO]: Default game type: SURVIVAL
-[01:17:55] [Server thread/INFO]: Generating keypair
-[01:17:55] [Server thread/INFO]: Starting Minecraft server on *:25565
-[01:17:55] [Server thread/INFO]: Using default channel type
-[01:17:55] [Server thread/INFO]: Paper: Using libdeflate (macOS ARM64 / Apple Silicon) compression from Velocity.
-[01:17:55] [Server thread/INFO]: Paper: Using native (macOS ARM64 / Apple Silicon) cipher from Velocity.
-[01:17:55] [Server thread/INFO]: [BattlePlugin] Loading server plugin BattlePlugin v1.0-SNAPSHOT
-[01:17:55] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[01:17:55] [Server thread/INFO]: Preparing level "world"
-[01:17:55] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[01:17:55] [Server thread/INFO]: Preparing spawn area: 0%
-[01:17:55] [Paper Common Worker #2/INFO]: [MCTypeRegistry] Initialising converters for DataConverter...
-[01:17:55] [Paper Common Worker #2/INFO]: [MCTypeRegistry] Finished initialising converters for DataConverter in 125.8ms
-[01:17:56] [Server thread/INFO]: Preparing spawn area: 30%
-[01:17:56] [Server thread/INFO]: Time elapsed: 570 ms
-[01:17:56] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
-[01:17:56] [Server thread/INFO]: Preparing spawn area: 0%
-[01:17:56] [Server thread/INFO]: Time elapsed: 68 ms
-[01:17:56] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
-[01:17:56] [Server thread/INFO]: Preparing spawn area: 0%
-[01:17:56] [Server thread/INFO]: Time elapsed: 27 ms
-[01:17:56] [Server thread/INFO]: [BattlePlugin] Enabling BattlePlugin v1.0-SNAPSHOT
-[01:17:56] [Server thread/INFO]: [BattlePlugin] Battle 플러그인이 활성화 되었습니다.
-[01:17:56] [Server thread/INFO]: [spark] Starting background profiler...
-[01:17:56] [Server thread/INFO]: Done preparing level "world" (1.280s)
-[01:17:56] [Server thread/INFO]: Running delayed init tasks
-[01:17:56] [Server thread/INFO]: Done (5.633s)! For help, type "help"
-[02:00:06] [User Authenticator #0/INFO]: UUID of player KimWang0906 is 94230708-9f79-487a-80f4-b3507938de6e
-[02:00:07] [Server thread/INFO]: KimWang0906 joined the game
-[02:00:07] [Server thread/INFO]: KimWang0906[/127.0.0.1:55896] logged in with entity id 40 at ([world]136.07720122877464, 76.00607135344895, 708.285495836304)
-[02:06:55] [Server thread/INFO]: KimWang0906 lost connection: Disconnected
-[02:06:55] [Server thread/INFO]: KimWang0906 left the game
-[02:33:22] [Server thread/INFO]: Stopping the server
-[02:33:22] [Server thread/INFO]: Stopping server
-[02:33:22] [Server thread/INFO]: [BattlePlugin] Disabling BattlePlugin v1.0-SNAPSHOT
-[02:33:22] [Server thread/INFO]: [BattlePlugin] Battle 플러그인이 비활성화 되었습니다.
-[02:33:22] [Server thread/INFO]: Saving players
-[02:33:22] [Server thread/INFO]: Saving worlds
-[02:33:22] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
-[02:33:22] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
-[02:33:22] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
-[02:33:22] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
-[02:33:22] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 71 entity chunks, 0 poi chunks in world 'world' in 0.04s
-[02:33:22] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world'
-[02:33:22] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world'
-[02:33:22] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
-[02:33:22] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
-[02:33:22] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
-[02:33:22] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
-[02:33:22] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 5 entity chunks, 0 poi chunks in world 'world_nether' in 0.02s
-[02:33:22] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_nether'
-[02:33:22] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_nether'
-[02:33:22] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
-[02:33:22] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
-[02:33:22] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
-[02:33:22] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
-[02:33:22] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 0 entity chunks, 0 poi chunks in world 'world_the_end' in 0.01s
-[02:33:22] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_the_end'
-[02:33:22] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_the_end'
-[02:33:22] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[02:33:22] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[02:33:22] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[02:33:22] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
-[02:33:22] [Server thread/INFO]: Waiting for I/O tasks to complete...
-[02:33:22] [Server thread/INFO]: All I/O tasks to complete
-[02:33:22] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of worker pool for up to 60s...
-[02:33:22] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of I/O pool for up to 60s...
+[19:46:35] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.5; Homebrew Homebrew) on Mac OS X 15.1.1 (aarch64)
+[19:46:35] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.3-60-master@cf956ac (2024-11-24T21:39:46Z) for Minecraft 1.21.3
+[19:46:36] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[19:46:36] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins/BattlePlugin-1.0-BETA.jar'...
+[19:46:36] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins/BattlePlugin-1.0-BETA.jar' in 249ms.
+[19:46:36] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
+[19:46:36] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
+ - BattlePlugin (1.0-BETA)
+[19:46:38] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[19:46:38] [ServerMain/INFO]: Loaded 1337 recipes
+[19:46:38] [ServerMain/INFO]: Loaded 1448 advancements
+[19:46:38] [Server thread/INFO]: Starting minecraft server version 1.21.3
+[19:46:38] [Server thread/INFO]: Loading properties
+[19:46:38] [Server thread/INFO]: This server is running Paper version 1.21.3-60-master@cf956ac (2024-11-24T21:39:46Z) (Implementing API version 1.21.3-R0.1-SNAPSHOT)
+[19:46:39] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[19:46:39] [Server thread/INFO]: Using 4 threads for Netty based IO
+[19:46:39] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[19:46:39] [Server thread/INFO]: [MoonriseCommon] Paper is using 3 worker threads, 1 I/O threads
+[19:46:39] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using population gen parallelism: true
+[19:46:39] [Server thread/INFO]: Default game type: SURVIVAL
+[19:46:39] [Server thread/INFO]: Generating keypair
+[19:46:39] [Server thread/INFO]: Starting Minecraft server on *:25565
+[19:46:39] [Server thread/INFO]: Using default channel type
+[19:46:39] [Server thread/INFO]: Paper: Using libdeflate (macOS ARM64 / Apple Silicon) compression from Velocity.
+[19:46:39] [Server thread/INFO]: Paper: Using native (macOS ARM64 / Apple Silicon) cipher from Velocity.
+[19:46:39] [Server thread/INFO]: [BattlePlugin] Loading server plugin BattlePlugin v1.0-BETA
+[19:46:39] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[19:46:39] [Server thread/INFO]: Preparing level "world"
+[19:46:39] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[19:46:39] [Paper Common Worker #0/INFO]: [MCTypeRegistry] Initialising converters for DataConverter...
+[19:46:40] [Paper Common Worker #0/INFO]: [MCTypeRegistry] Finished initialising converters for DataConverter in 127.8ms
+[19:46:40] [Server thread/INFO]: Preparing spawn area: 0%
+[19:46:40] [Server thread/INFO]: Time elapsed: 455 ms
+[19:46:40] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[19:46:40] [Server thread/INFO]: Preparing spawn area: 0%
+[19:46:40] [Server thread/INFO]: Time elapsed: 76 ms
+[19:46:40] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[19:46:40] [Server thread/INFO]: Preparing spawn area: 0%
+[19:46:40] [Server thread/INFO]: Time elapsed: 27 ms
+[19:46:40] [Server thread/INFO]: [BattlePlugin] Enabling BattlePlugin v1.0-BETA
+[19:46:40] [Server thread/INFO]: [BattlePlugin] Battle 플러그인이 활성화 되었습니다.
+[19:46:40] [Server thread/INFO]: [spark] Starting background profiler...
+[19:46:40] [Server thread/INFO]: Done preparing level "world" (1.142s)
+[19:46:40] [Server thread/INFO]: Running delayed init tasks
+[19:46:40] [Server thread/INFO]: Done (5.510s)! For help, type "help"
+[19:46:45] [User Authenticator #0/INFO]: UUID of player KimWang0906 is 94230708-9f79-487a-80f4-b3507938de6e
+[19:46:46] [Server thread/INFO]: KimWang0906 joined the game
+[19:46:46] [Server thread/INFO]: KimWang0906[/127.0.0.1:59788] logged in with entity id 71 at ([world]2.6110510045980226, 70.0, -76.26924325025438)
+[19:46:48] [Server thread/INFO]: KimWang0906 issued server command: /ab init
+[19:46:48] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 게임 초기화 진행
+[19:46:48] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 플레이어 초기화 중..
+[19:46:48] [Server thread/INFO]: [AbilityBattle] Player KimWang0906 is now full condition
+[19:46:48] [Server thread/INFO]: [AbilityBattle] Player KimWang0906 is now reset ability
+[19:46:48] [Server thread/INFO]: [AbilityBattle] 허용 아이템 설정 중..
+[19:46:48] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 오버월드 월드보더 설정 중..
+[19:46:48] [Server thread/INFO]: [AbilityBattle] KimWang0906  -  TextComponentImpl{content="world 월드보더 크기가 50000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[19:46:48] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 네더 월드보더 설정 중..
+[19:46:48] [Server thread/INFO]: [AbilityBattle] KimWang0906  -  TextComponentImpl{content="world_nether 월드보더 크기가 12500으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[19:46:48] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 엔드 월드보더 설정 중..
+[19:46:48] [Server thread/INFO]: [AbilityBattle] KimWang0906  -  TextComponentImpl{content="world_the_end 월드보더 크기가 3000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[19:46:48] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 스코어보드 초기화 중..
+[19:46:48] [Server thread/INFO]: [AbilityBattle] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. STANDBY → INITIALIZED", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[19:46:48] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 게임 초기화가 완료되었습니다.
+[19:46:50] [Server thread/INFO]: KimWang0906 issued server command: /ab start
+[19:46:50] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 게임이 시작됩니다!
+[19:46:50] [Server thread/INFO]: [AbilityBattle] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. INITIALIZED → GAME_SETUP", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[19:46:50] [Server thread/INFO]: [AbilityBattle] KimWang0906  -  TextComponentImpl{content="시퀀스 - 셋업 진행중", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[19:46:50] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 팀 초기화 중..
+[19:46:50] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 타이머 설정 중..
+[19:46:50] [Server thread/INFO]: [AbilityBattle] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. GAME_SETUP → COUNT_DOWN", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[19:46:50] [Server thread/INFO]: [AbilityBattle] 10분 후 PVP가 가능합니다.
+[19:46:50] [Server thread/INFO]: [AbilityBattle] 벤 아이템 목록 설정 중..
+[19:46:50] [Server thread/INFO]: [AbilityBattle] 벤 아이템 설정 중..
+[19:46:50] [Server thread/INFO]: [AbilityBattle] 게임 규칙 설정 중..
+[19:46:50] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 게임이 시작되었습니다!
+[19:46:53] [Server thread/INFO]: KimWang0906 lost connection: Disconnected
+[19:46:53] [Server thread/INFO]: KimWang0906 left the game
+[19:46:55] [User Authenticator #0/INFO]: UUID of player KimWang0906 is 94230708-9f79-487a-80f4-b3507938de6e
+[19:46:55] [Server thread/INFO]: KimWang0906 joined the game
+[19:46:55] [Server thread/INFO]: KimWang0906[/127.0.0.1:59797] logged in with entity id 257 at ([world]2.6110510045980226, 70.0, -76.26924325025438)
+[19:46:57] [Server thread/INFO]: KimWang0906 issued server command: /ab stop
+[19:46:57] [Server thread/INFO]: [AbilityBattle] PVP 제한 타이머가 중지되었습니다.
+[19:46:57] [Server thread/INFO]: [AbilityBattle] Player KimWang0906 is now reset ability
+[19:46:57] [Server thread/INFO]: [AbilityBattle] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. COUNT_DOWN → STOPPED", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[19:46:57] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 게임이 관리자에 의해 종료되었습니다!
+[19:46:58] [Server thread/INFO]: [AbilityBattle] Stopping scoreboard task...
+[19:46:58] [Server thread/INFO]: [AbilityBattle] Stopped scoreboard task
+[19:46:59] [Server thread/INFO]: KimWang0906 issued server command: /ab init
+[19:46:59] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 게임 초기화 진행
+[19:46:59] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 플레이어 초기화 중..
+[19:46:59] [Server thread/INFO]: [AbilityBattle] Player KimWang0906 is now full condition
+[19:46:59] [Server thread/INFO]: [AbilityBattle] Player KimWang0906 is now reset ability
+[19:46:59] [Server thread/INFO]: [AbilityBattle] 허용 아이템 설정 중..
+[19:46:59] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 오버월드 월드보더 설정 중..
+[19:46:59] [Server thread/INFO]: [AbilityBattle] KimWang0906  -  TextComponentImpl{content="world 월드보더 크기가 50000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[19:46:59] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 네더 월드보더 설정 중..
+[19:46:59] [Server thread/INFO]: [AbilityBattle] KimWang0906  -  TextComponentImpl{content="world_nether 월드보더 크기가 12500으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[19:46:59] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 엔드 월드보더 설정 중..
+[19:46:59] [Server thread/INFO]: [AbilityBattle] KimWang0906  -  TextComponentImpl{content="world_the_end 월드보더 크기가 3000으로 설정되었습니다.", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="green", value="#55ff55"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[19:46:59] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 스코어보드 초기화 중..
+[19:46:59] [Server thread/INFO]: [AbilityBattle] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. STOPPED → INITIALIZED", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[19:46:59] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 게임 초기화가 완료되었습니다.
+[19:47:04] [Server thread/INFO]: KimWang0906 issued server command: /ab register KimWang0906 shield 1
+[19:47:04] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 플레이어 추가 중..
+[19:47:04] [Server thread/INFO]: [AbilityBattle] getOnlinePlayers [CraftPlayer{name=KimWang0906}]
+[19:47:04] [Server thread/INFO]: [AbilityBattle] 시퀀스 - KimWang0906을 대기 목록에 추가하였습니다.
+[19:47:05] [Server thread/INFO]: KimWang0906 issued server command: /ab start
+[19:47:05] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 게임이 시작됩니다!
+[19:47:05] [Server thread/INFO]: [AbilityBattle] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. INITIALIZED → GAME_SETUP", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[19:47:05] [Server thread/INFO]: [AbilityBattle] KimWang0906  -  TextComponentImpl{content="시퀀스 - 셋업 진행중", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[19:47:05] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 팀 초기화 중..
+[19:47:05] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 타이머 설정 중..
+[19:47:05] [Server thread/INFO]: [AbilityBattle] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. GAME_SETUP → COUNT_DOWN", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[19:47:05] [Server thread/INFO]: [AbilityBattle] 10분 후 PVP가 가능합니다.
+[19:47:05] [Server thread/INFO]: [AbilityBattle] 벤 아이템 목록 설정 중..
+[19:47:05] [Server thread/INFO]: [AbilityBattle] 벤 아이템 설정 중..
+[19:47:05] [Server thread/INFO]: [AbilityBattle] 게임 규칙 설정 중..
+[19:47:05] [Server thread/INFO]: [AbilityBattle] 시퀀스 - 게임이 시작되었습니다!
+[19:47:11] [Server thread/INFO]: KimWang0906 lost connection: Disconnected
+[19:47:11] [Server thread/INFO]: KimWang0906 left the game
+[19:47:13] [User Authenticator #0/INFO]: UUID of player KimWang0906 is 94230708-9f79-487a-80f4-b3507938de6e
+[19:47:13] [Server thread/INFO]: KimWang0906 joined the game
+[19:47:13] [Server thread/INFO]: KimWang0906[/127.0.0.1:59807] logged in with entity id 262 at ([world]10.224483702687966, 69.0, -79.85816187632652)
+[19:57:05] [Server thread/INFO]: [AbilityBattle] KimWang0906  -  TextComponentImpl{content="게임상태가 변경되었습니다. COUNT_DOWN → RUNNING", style=StyleImpl{obfuscated=not_set, bold=not_set, strikethrough=not_set, underlined=not_set, italic=not_set, color=NamedTextColor{name="gray", value="#aaaaaa"}, clickEvent=null, hoverEvent=null, insertion=null, font=null}, children=[]}
+[19:57:05] [Server thread/INFO]: [AbilityBattle] 10분이 지나 PVP가 활성화 되었습니다!
+[20:06:05] [Server thread/INFO]: Stopping the server
+[20:06:05] [Server thread/INFO]: Stopping server
+[20:06:05] [Server thread/INFO]: [BattlePlugin] Disabling BattlePlugin v1.0-BETA
+[20:06:05] [Server thread/INFO]: [BattlePlugin] Battle 플러그인이 비활성화 되었습니다.
+[20:06:05] [Server thread/INFO]: Saving players
+[20:06:05] [Server thread/INFO]: KimWang0906 lost connection: Server closed
+[20:06:05] [Server thread/INFO]: KimWang0906 left the game
+[20:06:05] [Server thread/INFO]: Saving worlds
+[20:06:05] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[20:06:05] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
+[20:06:05] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
+[20:06:05] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
+[20:06:05] [Server thread/INFO]: [ChunkHolderManager] Saved 1257 block chunks, 168 entity chunks, 0 poi chunks in world 'world' in 0.37s
+[20:06:05] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world'
+[20:06:05] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world'
+[20:06:06] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
+[20:06:06] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
+[20:06:06] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
+[20:06:06] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
+[20:06:06] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 5 entity chunks, 0 poi chunks in world 'world_nether' in 0.02s
+[20:06:06] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_nether'
+[20:06:06] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_nether'
+[20:06:06] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
+[20:06:06] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
+[20:06:06] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
+[20:06:06] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
+[20:06:06] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 0 entity chunks, 0 poi chunks in world 'world_the_end' in 0.01s
+[20:06:06] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_the_end'
+[20:06:06] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_the_end'
+[20:06:06] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[20:06:06] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[20:06:06] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[20:06:06] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[20:06:06] [Server thread/INFO]: Waiting for I/O tasks to complete...
+[20:06:06] [Server thread/INFO]: All I/O tasks to complete
+[20:06:06] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of worker pool for up to 60s...
+[20:06:06] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of I/O pool for up to 60s...

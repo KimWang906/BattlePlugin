@@ -20,4 +20,8 @@ public class ArrowAbility extends Ability {
             speedAttribute.setBaseValue(speed);
         }
     }
+
+    public static String getAbilityName() {
+        return "arrow";
+    }
 }

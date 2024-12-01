@@ -227,7 +227,7 @@ public class Configure {
 
         public FistAbilityConfig(FileConfiguration config) {
             super(config);
-            this.baseHealth = config.getDouble("ability.fist.base_health", 0.5);
+            this.baseHealth = config.getDouble("ability.fist.base_health", 10);
             this.baseAttackDamage = config.getDouble("ability.fist.base_attack_damage", 7);
             this.increaseHealth = config.getDouble("ability.fist.increase_health", 2);
             this.maximumHealth = config.getLong("ability.fist.maximum_health", 60);

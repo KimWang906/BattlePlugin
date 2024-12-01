@@ -11,4 +11,8 @@ public class ShieldAbility extends Ability {
         setDescription("왼손에 들면 무적, 오른손에 들면 공격 불가 상태가 됩니다.");
         addRequiredItems(new ItemStack(Material.SHIELD));
     }
+
+    public static String getAbilityName() {
+        return "shield";
+    }
 }

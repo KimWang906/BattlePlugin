@@ -58,4 +58,8 @@ public class MaceAbility extends Ability {
             jumpAttribute.setBaseValue(DEFAULT_JUMP_STRENGTH);
         }
     }
+
+    public static String getAbilityName() {
+        return "mace";
+    }
 }

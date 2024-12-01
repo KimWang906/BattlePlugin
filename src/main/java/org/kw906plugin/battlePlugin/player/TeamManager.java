@@ -53,7 +53,6 @@ public class TeamManager {
                         int currentTeamScore = teamScore.getOrDefault(i, 0);
                         Score score = objective.getScore("Team " + i);
                         score.setScore(currentTeamScore);
-//                        SendMessage.logConsole("Current team score is " + currentTeamScore);
                     }
 
                     // 플레이어에게 스코어보드 설정
@@ -70,6 +69,13 @@ public class TeamManager {
                 }, 0L, 20L);
     }
 
+    public static Scoreboard getScoreboard() {
+        return scoreboard;
+    }
+
+    public static Objective getObjective() {
+        return objective;
+    }
 
     public static void clearScoreboard() {
         for (BattlePlayer battlePlayer : AbilityManager.getPlayers()) {
@@ -106,6 +112,14 @@ public class TeamManager {
 
     public static HashMap<Integer, Integer> getTeamScore() {
         return teamScore;
+    }
+
+    public static List<String> getTeamNumberStrings() {
+        List<String> teamNames = new ArrayList<>();
+        for (int teamName : teamScore.keySet()) {
+            teamNames.add(String.valueOf(teamName));
+        }
+        return teamNames;
     }
 
     public static void setTeamScore(int team, int score) {
@@ -149,6 +163,8 @@ public class TeamManager {
             }
         }
 
+        SendMessage.logConsole("Found " + teamsList.size() + " teams");
+        SendMessage.logConsole("Team list: " + teamsList);
         return teamsList;
     }
 }

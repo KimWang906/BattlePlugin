@@ -4,7 +4,10 @@ import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.GameRule;
+import org.bukkit.entity.Arrow;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
+import org.bukkit.entity.TNTPrimed;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -66,16 +69,43 @@ public class NoPvPEvent implements Listener {
 
     @EventHandler
     public void onPlayerDamage(EntityDamageByEntityEvent event) {
-        if (event.getDamager() instanceof Player && event.getEntity() instanceof Player) {
-            if (pvpDisabled) {
-                event.setCancelled(true);
-                SendMessage.sendActionBar(
-                        (Player) event.getDamager(),
-                        Component.text("PVP는 " + config.noPVPCount + "분 후에 가능합니다!")
-                                 .color(NamedTextColor.RED).decorate(TextDecoration.BOLD)
-                );
+        // 피해자가 플레이어인지 확인
+        if (!(event.getEntity() instanceof Player)) return;
+
+        // PVP 제한 여부 확인
+        if (pvpDisabled) {
+            Entity damager = event.getDamager();
+            String message = "PVP는 " + config.noPVPCount + "분 후에 가능합니다!";
+
+            switch (damager) {
+                case Player attacker -> {
+                    event.setCancelled(true);
+                    cancelPvP(attacker, message);
+                }
+                case Arrow arrow when arrow.getShooter() instanceof Player shooter -> {
+                    event.setCancelled(true);
+                    cancelPvP(shooter, message);
+                }
+                case TNTPrimed tnt when tnt.getSource() instanceof Player source -> {
+                    event.setCancelled(true);
+                    cancelPvP(source, message);
+                }
+                default -> {
+                }
             }
         }
     }
+
+    private void cancelPvP(Entity attacker, String message) {
+        if (attacker instanceof Player player) {
+            SendMessage.sendActionBar(
+                    player,
+                    Component.text(message)
+                             .color(NamedTextColor.RED)
+                             .decorate(TextDecoration.BOLD)
+            );
+        }
+    }
+
 }
 
